@@ -32,5 +32,6 @@ module.exports = {
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-no-target-blank': 'off'
   },
 }
