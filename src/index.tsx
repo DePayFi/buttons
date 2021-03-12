@@ -9,9 +9,7 @@ interface initParameters {
   document: Document
 }
 
-const init = function ({
-  document
-}: initParameters): void {
+const init = function ({ document }: initParameters): void {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
