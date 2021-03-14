@@ -757,7 +757,7 @@ const init = function ({ document }) {
             DePayWidgets[widget](widgetArguments);
         };
         umd({
-            document: document,
+            document,
             element,
             content: react.createElement(Button, { label: label, onClick: onclickHandler }),
             outsideStyle: outsideStyle,
