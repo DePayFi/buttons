@@ -752,7 +752,7 @@ var umd = createCommonjsModule(function (module, exports) {
 })));
 });
 
-const init = function () {
+const init = function ({ document }) {
     Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
         const label = element.getAttribute('label') || 'Pay';
         const widget = element.getAttribute('widget') || 'Payment';
@@ -761,7 +761,7 @@ const init = function () {
             DePayWidgets[widget](widgetArguments);
         };
         umd({
-            document,
+            document: document,
             element,
             content: react.createElement(Button, { label: label, onClick: onclickHandler }),
             outsideStyle: outsideStyle,
