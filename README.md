@@ -4,7 +4,7 @@ Just place this on your website. No additional installations required:
 
 ```
 <div class="DePayButton" label="Pay" widget="Payment" arguments='{"amount": "20", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'></div>
-<script src="https://unpkg.com/depay-buttons@1/dist/umd/index.js"></script>
+<script src="https://depay.fi/integrate/buttons/v2.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -25,7 +25,7 @@ Intended to perform payments for services and goods:
 
 ```
 <div class="DePayButton" label="Pay" widget="Payment" arguments='{"amount": "20", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'></div>
-<script src="https://unpkg.com/depay-buttons@1/dist/umd/index.js"></script>
+<script src="https://depay.fi/integrate/buttons/v2.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -38,7 +38,7 @@ Intended to receive donations with having users select the amount they are donat
 
 ```
 <div class="DePayButton" label="Donate" widget="Donation" arguments='{"amount": {"start": "10","min": "1","step": "1" }, "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'></div>
-<script src="https://unpkg.com/depay-buttons@1/dist/umd/index.js"></script>
+<script src="https://depay.fi/integrate/buttons/v2.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -51,7 +51,7 @@ Intended to directly sell tokens:
 
 ```
 <div class="DePayButton" label="Buy" widget="Sale" arguments='{"amount": {"start": "10","min": "1","step": "1" }, "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb"}'></div>
-<script src="https://unpkg.com/depay-buttons@1/dist/umd/index.js"></script>
+<script src="https://depay.fi/integrate/buttons/v2.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
