@@ -1,12 +1,12 @@
 'use strict';
 
-var React$1 = require('react');
+var React = require('react');
 var DePayWidgets = require('@depay/widgets');
 var ReactDOM = require('react-dom');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var DePayWidgets__default = /*#__PURE__*/_interopDefaultLegacy(DePayWidgets);
 var ReactDOM__default$1 = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
@@ -130,7 +130,7 @@ function ReactShadowDOM({ document, element, content, outsideStyle = '', insideS
 
 var ReactShadowDOM_1 = ReactShadowDOM;
 
-var init = function init(_ref) {
+function init (_ref) {
   var document = _ref.document;
   Array.from(document.getElementsByClassName('DePayButton')).forEach(function (element) {
     var label = element.getAttribute('label') || 'Pay';
@@ -144,7 +144,7 @@ var init = function init(_ref) {
     ReactShadowDOM_1({
       document: document,
       element: element,
-      content: /*#__PURE__*/React.createElement(Button, {
+      content: /*#__PURE__*/React__default['default'].createElement(Button, {
         label: label,
         onClick: onclickHandler
       }),
@@ -152,7 +152,7 @@ var init = function init(_ref) {
       insideStyle: insideStyle
     });
   });
-};
+}
 
 var DePayButtons = {
   init: init

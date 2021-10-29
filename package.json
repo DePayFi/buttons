@@ -32,12 +32,11 @@
     "test:jest": "npx jest --no-cache",
     "test:integration": "yarn test:cypress"
   },
-  "dependencies": {
-    "@depay/widgets": "^3.0.4"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^17",
-    "react-dom": "^17"
+    "react-dom": "^17",
+    "@depay/widgets": "^3.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

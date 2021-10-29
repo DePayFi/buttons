@@ -79539,7 +79539,7 @@ var insideStyle = "\n  .ReactShadowDOMInsideContainer {\n    user-select: none;\
 
 var outsideStyle = "\n  text-align: center;\n";
 
-var init$1 = function init(_ref) {
+function init$1 (_ref) {
   var document = _ref.document;
   Array.from(document.getElementsByClassName('DePayButton')).forEach(function (element) {
     var label = element.getAttribute('label') || 'Pay';
@@ -79553,7 +79553,7 @@ var init$1 = function init(_ref) {
     ReactShadowDOM_1({
       document: document,
       element: element,
-      content: /*#__PURE__*/React.createElement(Button, {
+      content: /*#__PURE__*/react.createElement(Button, {
         label: label,
         onClick: onclickHandler
       }),
@@ -79561,7 +79561,7 @@ var init$1 = function init(_ref) {
       insideStyle: insideStyle
     });
   });
-};
+}
 
 var DePayButtons = {
   init: init$1

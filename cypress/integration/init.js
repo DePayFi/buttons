@@ -1,5 +1,6 @@
-import React from 'react'
 import DePayButtons from '../../src'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 describe('init', () => {
   
