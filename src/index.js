@@ -1,15 +1,11 @@
 import Button from './components/button'
-import DePayWidgets from 'depay-widgets'
+import DePayWidgets from '@depay/widgets'
 import insideStyle from './styles/insideStyle'
 import outsideStyle from './styles/outsideStyle'
 import React from 'react'
-import ReactShadowDOM from 'depay-react-shadow-dom'
+import { ReactShadowDOM } from 'depay-react-shadow-dom'
 
-interface initParameters {
-  document: Document
-}
-
-const init = function ({ document }: initParameters): void {
+const init = function ({ document }) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
@@ -22,7 +18,7 @@ const init = function ({ document }: initParameters): void {
       element,
       content: <Button label={label} onClick={onclickHandler} />,
       outsideStyle: outsideStyle,
-      insideStyle: insideStyle,
+      insideStyle: insideStyle
     })
   })
 }

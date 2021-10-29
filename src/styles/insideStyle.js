@@ -37,17 +37,21 @@ const insideStyle = `
   }
 
   .ExampleToken {
+    border-radius: 999px;
     height: 22px;
-    width: 22px;
     margin-right: 6px;
     margin-top: 6px;
+    overflow: hidden;
+    width: 22px;
   }
 
   .PoweredBy {
-    color: rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.2);
+    display: block;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.8rem;
     font-style: italic;
+    line-height: 0.9rem;
     text-decoration: none;
   }
 
