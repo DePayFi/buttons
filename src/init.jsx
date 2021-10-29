@@ -9,9 +9,9 @@ export default function ({ document }) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
-    const widgetArguments = JSON.parse(element.getAttribute('arguments') || '{}')
+    const widgetConfiguration = JSON.parse(element.getAttribute('configuration') || '{}')
     const onclickHandler = function () {
-      DePayWidgets[widget](widgetArguments)
+      DePayWidgets[widget](widgetConfiguration)
     }
     ReactShadowDOM({
       document,

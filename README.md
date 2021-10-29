@@ -7,7 +7,7 @@ Just place this on your website. No additional installations required:
   class="DePayButton"
   label="Pay"
   widget="Payment"
-  arguments='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
+  configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
@@ -22,7 +22,7 @@ Every button can be configured by adding/changing the html attributes
 
 - `widget`: The name of the widget to be opened on click (see: https://github.com/DePayFi/widgets)
 
-- `arguments`: The arguments passed to the widget
+- `configuration`: The configuration passed to the widget
 
 ### Payment Button
 
@@ -33,7 +33,7 @@ Intended to perform payments for services and goods:
   class="DePayButton"
   label="Pay"
   widget="Payment"
-  arguments='{"amount": "20", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'
+  configuration='{"amount": "20", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
@@ -51,7 +51,7 @@ Intended to receive donations with having users select the amount they are donat
   class="DePayButton"
   label="Donate"
   widget="Donation"
-  arguments='{"amount":{"start":10,"min":1,"step":1},"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","blockchains":["ethereum"],"receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'
+  configuration='{"amount":{"start":10,"min":1,"step":1},"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","blockchains":["ethereum"],"receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
@@ -69,7 +69,7 @@ Intended to directly sell tokens:
   class="DePayButton"
   label="Buy"
   widget="Sale"
-  arguments='{"amount":{"start":10,"min":1,"step":1},"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","blockchains":["ethereum"]}'
+  configuration='{"amount":{"start":10,"min":1,"step":1},"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","blockchains":["ethereum"]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>

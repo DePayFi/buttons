@@ -135,10 +135,10 @@ function init (_ref) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach(function (element) {
     var label = element.getAttribute('label') || 'Pay';
     var widget = element.getAttribute('widget') || 'Payment';
-    var widgetArguments = JSON.parse(element.getAttribute('arguments') || '{}');
+    var widgetConfiguration = JSON.parse(element.getAttribute('configuration') || '{}');
 
     var onclickHandler = function onclickHandler() {
-      DePayWidgets__default['default'][widget](widgetArguments);
+      DePayWidgets__default['default'][widget](widgetConfiguration);
     };
 
     ReactShadowDOM_1({
