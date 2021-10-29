@@ -17,5 +17,5 @@ export default {
   'depay-react-token-image': 'ReactTokenImage',
   'react-error-boundary': 'ErrorBoundary',
   'react-rangeslider': 'ReactRangeslider',
-  '@depay/walletconnect': 'WalletConnect',
+  '@depay/walletconnect': 'WalletConnect'
 }

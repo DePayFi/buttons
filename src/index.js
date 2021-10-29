@@ -2,7 +2,6 @@ import Button from './components/button'
 import DePayWidgets from '@depay/widgets'
 import insideStyle from './styles/insideStyle'
 import outsideStyle from './styles/outsideStyle'
-import React from 'react'
 import { ReactShadowDOM } from 'depay-react-shadow-dom'
 
 const init = function ({ document }) {
@@ -23,4 +22,8 @@ const init = function ({ document }) {
   })
 }
 
-export { init }
+let DePayButtons = {
+  init
+}
+
+export default DePayButtons
