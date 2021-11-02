@@ -33,14 +33,16 @@ export default (props)=>{
           title="BNB"
         />
       </div>
-      <a
-        className="PoweredBy"
-        target="_blank"
-        href={ `https://depay.fi?utm_source=${window.location.hostname}&utm_medium=button&utm_campaign=ButtonV3` }
-        title="Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion."
-      >
-        Powered by <strong>DePay</strong>
-      </a>
+      <div>
+        <a
+          className="PoweredBy"
+          target="_blank"
+          href={ `https://depay.fi?utm_source=${window.location.hostname}&utm_medium=button&utm_campaign=ButtonV3` }
+          title="Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion."
+        >
+          Powered by <strong>DePay</strong>
+        </a>
+      </div>
     </div>
   )
 }
