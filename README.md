@@ -33,7 +33,7 @@ Intended to perform payments for services and goods:
   class="DePayButton"
   label="Pay"
   widget="Payment"
-  configuration='{"amount": "20", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}'
+  configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
