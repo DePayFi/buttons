@@ -51,7 +51,7 @@ Intended to receive donations with having users select the amount they are donat
   class="DePayButton"
   label="Donate"
   widget="Donation"
-  configuration='{ "accept": [{ "blockchain": "ethereum", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02" }] }'
+  configuration='{"accept":[{"blockchain":"ethereum","token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
@@ -69,7 +69,7 @@ Intended to directly sell tokens:
   class="DePayButton"
   label="Buy"
   widget="Sale"
-  configuration='{ "sell": { "ethereum": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb" } }'
+  configuration='{"sell":{"ethereum":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb"}}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v3.js"></script>
 <noscript><a href="https://depay.fi">DePay</a> is currently not supported without JavaScript enabled.</noscript>
