@@ -1139,10 +1139,10 @@
     "@walletconnect/client" "^1.6.5"
     "@walletconnect/qrcode-modal" "^1.6.5"
 
-"@depay/widgets@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-4.2.2.tgz#c507c63db2e4c3985535949266b4c348cd6b3508"
-  integrity sha512-GGW3H7oeEHWKCJgiDupl7RiO39PgbdDMpcUIC5V3ocNi9euVTdPPIuOl8uTgbvKHLRjYtppdYXiSPiVdAWnjbg==
+"@depay/widgets@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-4.3.0.tgz#a58b7abb7faecb093f6064c336d1bccaa6182535"
+  integrity sha512-wgXnEtwatpXfsgwv2dPls7dAk7VcOEX5KpNnAMu0mFWuXhSpt0mIVIH5Qtt6yckSSvpH0d/Y3a/f/XuipnUW1A==
   dependencies:
     "@depay/walletconnect" "^1.0.2"
     decimal.js "^10.3.1"

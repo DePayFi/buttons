@@ -84231,7 +84231,8 @@
 	      amount = _useContext.amount;
 
 	  var _useContext2 = react.useContext(ConfigurationContext),
-	      currencyCode = _useContext2.currencyCode;
+	      currencyCode = _useContext2.currencyCode,
+	      tokenImage = _useContext2.tokenImage;
 
 	  var _useContext3 = react.useContext(PaymentValueContext),
 	      paymentValue = _useContext3.paymentValue;
@@ -84332,6 +84333,19 @@
 	    return /*#__PURE__*/React__default$1$1["default"].createElement(SaleOverviewSkeleton, null);
 	  }
 
+	  var tokenImageElement;
+
+	  if (tokenImage) {
+	    tokenImageElement = /*#__PURE__*/React__default$1$1["default"].createElement("img", {
+	      src: tokenImage
+	    });
+	  } else {
+	    tokenImageElement = /*#__PURE__*/React__default$1$1["default"].createElement(cjs$3.TokenImage, {
+	      blockchain: payment.route.blockchain,
+	      address: toToken.address
+	    });
+	  }
+
 	  return /*#__PURE__*/React__default$1$1["default"].createElement(Dialog$1, {
 	    header: /*#__PURE__*/React__default$1$1["default"].createElement("div", {
 	      className: "PaddingTopS PaddingLeftM PaddingRightM"
@@ -84353,10 +84367,7 @@
 	    }, /*#__PURE__*/React__default$1$1["default"].createElement("div", {
 	      className: "CardImage",
 	      title: payment.name
-	    }, /*#__PURE__*/React__default$1$1["default"].createElement(cjs$3.TokenImage, {
-	      blockchain: payment.route.blockchain,
-	      address: toToken.address
-	    })), /*#__PURE__*/React__default$1$1["default"].createElement("div", {
+	    }, tokenImageElement), /*#__PURE__*/React__default$1$1["default"].createElement("div", {
 	      className: "CardBody"
 	    }, /*#__PURE__*/React__default$1$1["default"].createElement("div", {
 	      className: "CardBodyWrapper"
@@ -84482,12 +84493,12 @@
 
 	var Sale = /*#__PURE__*/function () {
 	  var _ref4 = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2(_ref3) {
-	    var amount, sell, sent, confirmed, ensured, failed, error, critical, style, blacklist, providers, currency, connected, closed, document, accept, unmount;
+	    var amount, sell, sent, confirmed, ensured, failed, error, critical, style, blacklist, providers, currency, connected, closed, tokenImage, document, accept, unmount;
 	    return regenerator.wrap(function _callee2$(_context2) {
 	      while (1) {
 	        switch (_context2.prev = _context2.next) {
 	          case 0:
-	            amount = _ref3.amount, sell = _ref3.sell, sent = _ref3.sent, confirmed = _ref3.confirmed, ensured = _ref3.ensured, failed = _ref3.failed, error = _ref3.error, critical = _ref3.critical, style = _ref3.style, blacklist = _ref3.blacklist, providers = _ref3.providers, currency = _ref3.currency, connected = _ref3.connected, closed = _ref3.closed, document = _ref3.document;
+	            amount = _ref3.amount, sell = _ref3.sell, sent = _ref3.sent, confirmed = _ref3.confirmed, ensured = _ref3.ensured, failed = _ref3.failed, error = _ref3.error, critical = _ref3.critical, style = _ref3.style, blacklist = _ref3.blacklist, providers = _ref3.providers, currency = _ref3.currency, connected = _ref3.connected, closed = _ref3.closed, tokenImage = _ref3.tokenImage, document = _ref3.document;
 	            _context2.prev = 1;
 	            _context2.next = 4;
 	            return preflight$3({
@@ -84513,6 +84524,7 @@
 	                  unmount: unmount
 	                }, /*#__PURE__*/React__default$1$1["default"].createElement(ConfigurationProvider, {
 	                  configuration: {
+	                    tokenImage: tokenImage,
 	                    amount: amount,
 	                    sell: sell,
 	                    currency: currency,
