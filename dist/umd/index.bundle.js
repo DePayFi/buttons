@@ -72506,6 +72506,7 @@
 	};
 
 	let pathExists$1 = async (path) => {
+	  if(fixUniswapPath$1(path).length == 1) { return false }
 	  let pair = await request({
 	    blockchain: 'bsc',
 	    address: basics$3.contracts.factory.address,
@@ -72539,16 +72540,33 @@
 	  ) { return }
 
 	  let path;
-	  
 	  if (await pathExists$1([tokenIn, tokenOut])) {
 	    // direct path
 	    path = [tokenIn, tokenOut];
 	  } else if (
-	    (await pathExists$1([tokenIn, CONSTANTS$2.bsc.WRAPPED])) &&
-	    (await pathExists$1([tokenOut, CONSTANTS$2.bsc.WRAPPED]))
+	    tokenIn != CONSTANTS$2.bsc.WRAPPED &&
+	    await pathExists$1([tokenIn, CONSTANTS$2.bsc.WRAPPED]) &&
+	    tokenOut != CONSTANTS$2.bsc.WRAPPED &&
+	    await pathExists$1([tokenOut, CONSTANTS$2.bsc.WRAPPED])
 	  ) {
 	    // path via WRAPPED
 	    path = [tokenIn, CONSTANTS$2.bsc.WRAPPED, tokenOut];
+	  } else if (
+	    tokenIn != CONSTANTS$2.bsc.USD &&
+	    await pathExists$1([tokenIn, CONSTANTS$2.bsc.USD]) &&
+	    tokenOut != CONSTANTS$2.bsc.WRAPPED &&
+	    await pathExists$1([CONSTANTS$2.bsc.WRAPPED, tokenOut])
+	  ) {
+	    // path via tokenIn -> USD -> WRAPPED -> tokenOut
+	    path = [tokenIn, CONSTANTS$2.bsc.USD, CONSTANTS$2.bsc.WRAPPED, tokenOut];
+	  } else if (
+	    tokenIn != CONSTANTS$2.bsc.WRAPPED &&
+	    await pathExists$1([tokenIn, CONSTANTS$2.bsc.WRAPPED]) &&
+	    tokenOut != CONSTANTS$2.bsc.USD &&
+	    await pathExists$1([CONSTANTS$2.bsc.USD, tokenOut])
+	  ) {
+	    // path via tokenIn -> WRAPPED -> USD -> tokenOut
+	    path = [tokenIn, CONSTANTS$2.bsc.WRAPPED, CONSTANTS$2.bsc.USD, tokenOut];
 	  }
 
 	  // Add WRAPPED to route path if things start or end with NATIVE
@@ -72831,6 +72849,7 @@
 	};
 
 	let pathExists = async (path) => {
+	  if(fixUniswapPath(path).length == 1) { return false }
 	  let pair = await request({
 	    blockchain: 'ethereum',
 	    address: basics$2.contracts.factory.address,
@@ -72860,16 +72879,33 @@
 	  ) { return }
 
 	  let path;
-
 	  if (await pathExists([tokenIn, tokenOut])) {
 	    // direct path
 	    path = [tokenIn, tokenOut];
 	  } else if (
-	    (await pathExists([tokenIn, CONSTANTS$2.ethereum.WRAPPED])) &&
-	    (await pathExists([tokenOut, CONSTANTS$2.ethereum.WRAPPED]))
+	    tokenIn != CONSTANTS$2.ethereum.WRAPPED &&
+	    await pathExists([tokenIn, CONSTANTS$2.ethereum.WRAPPED]) &&
+	    tokenOut != CONSTANTS$2.ethereum.WRAPPED &&
+	    await pathExists([tokenOut, CONSTANTS$2.ethereum.WRAPPED])
 	  ) {
 	    // path via WRAPPED
 	    path = [tokenIn, CONSTANTS$2.ethereum.WRAPPED, tokenOut];
+	  } else if (
+	    tokenIn != CONSTANTS$2.ethereum.USD &&
+	    await pathExists([tokenIn, CONSTANTS$2.ethereum.USD]) &&
+	    tokenOut != CONSTANTS$2.ethereum.WRAPPED &&
+	    await pathExists([CONSTANTS$2.ethereum.WRAPPED, tokenOut])
+	  ) {
+	    // path via tokenIn -> USD -> WRAPPED -> tokenOut
+	    path = [tokenIn, CONSTANTS$2.ethereum.USD, CONSTANTS$2.ethereum.WRAPPED, tokenOut];
+	  } else if (
+	    tokenIn != CONSTANTS$2.ethereum.WRAPPED &&
+	    await pathExists([tokenIn, CONSTANTS$2.ethereum.WRAPPED]) &&
+	    tokenOut != CONSTANTS$2.ethereum.USD &&
+	    await pathExists([CONSTANTS$2.ethereum.USD, tokenOut])
+	  ) {
+	    // path via tokenIn -> WRAPPED -> USD -> tokenOut
+	    path = [tokenIn, CONSTANTS$2.ethereum.WRAPPED, CONSTANTS$2.ethereum.USD, tokenOut];
 	  }
 
 	  // Add WRAPPED to route path if things start or end with NATIVE
@@ -72879,7 +72915,7 @@
 	  } else if(_optionalChain$7([path, 'optionalAccess', _2 => _2.length]) && path[path.length-1] == CONSTANTS$2.ethereum.NATIVE) {
 	    path.splice(path.length-1, 0, CONSTANTS$2.ethereum.WRAPPED);
 	  }
-	  
+
 	  return path
 	};
 
