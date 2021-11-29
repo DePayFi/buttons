@@ -3,7 +3,7 @@ import DePayWidgets from '@depay/widgets'
 import insideStyle from './styles/insideStyle'
 import outsideStyle from './styles/outsideStyle'
 import React from 'react'
-import { ReactShadowDOM } from 'depay-react-shadow-dom'
+import { ReactShadowDOM } from '@depay/react-shadow-dom'
 
 export default function ({ document }) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
