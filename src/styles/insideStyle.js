@@ -55,7 +55,7 @@ const insideStyle = `
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.8rem;
     font-style: italic;
-    line-height: 0.9rem;
+    line-height: 26px;
     position: relative;
     text-decoration: none;
     top: -5px;
