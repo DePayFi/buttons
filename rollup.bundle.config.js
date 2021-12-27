@@ -8,15 +8,9 @@ export default Object.assign({}, rollup, {
   external: [], // no externals, bundle everything!
   output: [
     {
-      format: 'cjs',
-      exports: 'default',
-      globals: globals,
-      file: 'dist/cjs/index.bundle.js'
-    },
-    {
       format: 'es',
       globals: globals,
-      file: 'dist/es/index.bundle.js'
+      file: 'dist/esm/index.bundle.js'
     },
     {
       format: 'umd',
