@@ -64005,7 +64005,7 @@ var bn$4 = createCommonjsModule$5(function (module) {
 })(module, commonjsGlobal$4);
 });
 
-const version$3$4 = "logger/5.4.1";
+const version$3$4 = "logger/5.5.0";
 
 let _permanentCensorErrors$4 = false;
 let _censorErrors$4 = false;
@@ -64102,7 +64102,7 @@ var ErrorCode$4;
     //  - errorArgs?: The EIP848 error parameters
     //  - reason: The reason (only for EIP848 "Error(string)")
     ErrorCode["CALL_EXCEPTION"] = "CALL_EXCEPTION";
-    // Insufficien funds (< value + gasLimit * gasPrice)
+    // Insufficient funds (< value + gasLimit * gasPrice)
     //   - transaction: the transaction attempted
     ErrorCode["INSUFFICIENT_FUNDS"] = "INSUFFICIENT_FUNDS";
     // Nonce has already been used
@@ -64317,7 +64317,7 @@ class Logger$4 {
 Logger$4.errors = ErrorCode$4;
 Logger$4.levels = LogLevel$4;
 
-const version$2$4 = "bytes/5.4.0";
+const version$2$4 = "bytes/5.5.0";
 
 const logger$3$4 = new Logger$4(version$2$4);
 ///////////////////////////////
@@ -64334,6 +64334,9 @@ function addSlice$4(array) {
     };
     return array;
 }
+function isInteger$1(value) {
+    return (typeof (value) === "number" && value == value && (value % 1) === 0);
+}
 function isBytes$4(value) {
     if (value == null) {
         return false;
@@ -64344,12 +64347,12 @@ function isBytes$4(value) {
     if (typeof (value) === "string") {
         return false;
     }
-    if (value.length == null) {
+    if (!isInteger$1(value.length) || value.length < 0) {
         return false;
     }
     for (let i = 0; i < value.length; i++) {
         const v = value[i];
-        if (typeof (v) !== "number" || v < 0 || v >= 256 || (v % 1)) {
+        if (!isInteger$1(v) || v < 0 || v >= 256) {
             return false;
         }
     }
@@ -64483,7 +64486,7 @@ function hexZeroPad$4(value, length) {
     return value;
 }
 
-const version$1$4 = "bignumber/5.4.1";
+const version$1$4 = "bignumber/5.5.0";
 
 var BN$4 = bn$4.BN;
 const logger$2$4 = new Logger$4(version$1$4);
@@ -64685,7 +64688,7 @@ class BigNumber$4 {
             return BigNumber$4.from(hexlify$4(anyValue));
         }
         if (anyValue) {
-            // Hexable interface (takes piority)
+            // Hexable interface (takes priority)
             if (anyValue.toHexString) {
                 const hex = anyValue.toHexString();
                 if (typeof (hex) === "string") {
@@ -64722,7 +64725,7 @@ function toHex$5(value) {
     if (value[0] === "-") {
         // Strip off the negative sign
         value = value.substring(1);
-        // Cannot have mulitple negative signs (e.g. "--0x04")
+        // Cannot have multiple negative signs (e.g. "--0x04")
         if (value[0] === "-") {
             logger$2$4.throwArgumentError("invalid hex", "value", value);
         }
@@ -64834,7 +64837,7 @@ function parseFixed$3(value, decimals) {
         decimals = 0;
     }
     const multiplier = getMultiplier$3(decimals);
-    if (typeof (value) !== "string" || !value.match(/^-?[0-9.,]+$/)) {
+    if (typeof (value) !== "string" || !value.match(/^-?[0-9.]+$/)) {
         logger$1$4.throwArgumentError("invalid decimal value", "value", value);
     }
     // Is it negative?
@@ -64857,12 +64860,17 @@ function parseFixed$3(value, decimals) {
     if (!fraction) {
         fraction = "0";
     }
-    // Get significant digits to check truncation for underflow
-    {
-        const sigFraction = fraction.replace(/^([0-9]*?)(0*)$/, (all, sig, zeros) => (sig));
-        if (sigFraction.length > multiplier.length - 1) {
-            throwFault$5("fractional component exceeds decimals", "underflow", "parseFixed");
-        }
+    // Trim trailing zeros
+    while (fraction[fraction.length - 1] === "0") {
+        fraction = fraction.substring(0, fraction.length - 1);
+    }
+    // Check the fraction doesn't exceed our decimals size
+    if (fraction.length > multiplier.length - 1) {
+        throwFault$5("fractional component exceeds decimals", "underflow", "parseFixed");
+    }
+    // If decimals is 0, we have an empty string for fraction
+    if (fraction === "") {
+        fraction = "0";
     }
     // Fully pad the string with zeros to get to wei
     while (fraction.length < multiplier.length - 1) {
@@ -65121,7 +65129,7 @@ class FixedNumber$3 {
 const ONE$3 = FixedNumber$3.from(1);
 const BUMP$3 = FixedNumber$3.from("0.5");
 
-const version$m = "units/5.4.0";
+const version$m = "units/5.5.0";
 
 const logger$t = new Logger$4(version$m);
 const names$3 = [
@@ -65356,7 +65364,7 @@ class PaymentRoute {
   }
 }
 
-async function getAllAssetsFromAggregator({ accept, apiKey }) {
+async function getAllAssetsFromAggregator({ accept }) {
 
   let routes = [
     ...new Set(
@@ -65370,7 +65378,7 @@ async function getAllAssetsFromAggregator({ accept, apiKey }) {
     routes.map(
       async (route)=> {
         route = JSON.parse(route);
-        return await getAssets({ blockchain: route.blockchain, account: route.fromAddress, apiKey })
+        return await getAssets({ blockchain: route.blockchain, account: route.fromAddress })
       }
     )
   ).then((assets)=>{
@@ -65391,10 +65399,10 @@ async function onlyGetWhitelistedAssets({ whitelist }) {
   return assets
 }
 
-async function getAllAssets({ accept, apiKey, whitelist }) {
+async function getAllAssets({ accept, whitelist }) {
 
   if(whitelist == undefined) {
-    return getAllAssetsFromAggregator({ accept, apiKey })
+    return getAllAssetsFromAggregator({ accept })
   } else {
     return onlyGetWhitelistedAssets({ whitelist })
   }
@@ -65445,8 +65453,8 @@ function convertToRoutes({ tokens, accept }) {
   })).then((routes)=> routes.flat().filter(el => el))
 }
 
-async function route$8({ accept, whitelist, blacklist, apiKey, event, fee }) {
-  let paymentRoutes = getAllAssets({ accept, whitelist, apiKey })
+async function route$8({ accept, whitelist, blacklist, event, fee }) {
+  let paymentRoutes = getAllAssets({ accept, whitelist })
     .then((assets)=>filterBlacklistedAssets({ assets, blacklist }))
     .then(assetsToTokens)
     .then((tokens) => convertToRoutes({ tokens, accept }))
@@ -69525,6 +69533,10 @@ var ChangableAmountProvider = (function (props) {
             fromAddress: account,
             toAddress: account
           }).then(function (routes) {
+            if (routes[0] == undefined) {
+              return;
+            }
+
             Token.readable({
               amount: routes[0].amountOut,
               blockchain: maxRoute.blockchain,
@@ -69548,6 +69560,10 @@ var ChangableAmountProvider = (function (props) {
             fromAddress: account,
             toAddress: account
           }).then(function (routes) {
+            if (routes[0] == undefined) {
+              return;
+            }
+
             Token.readable({
               amount: routes[0].amountOut,
               blockchain: maxRoute.blockchain,

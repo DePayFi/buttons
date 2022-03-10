@@ -1206,10 +1206,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-9.1.0.tgz#e2a3b9d37b21796f8f33fc188ec13d240e615e17"
   integrity sha512-FF/ZdPKgtpaUpRkgQ/xAPjnhvRrQM6mowBlF2/fEEkBhZkGvlU1hEECEOuAomWpSWvEU/38phgoTG4d5XevJ2Q==
 
-"@depay/widgets@^6.21.1":
-  version "6.21.1"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-6.21.1.tgz#fe7d2c53b15d81d8f7675e22571d98fbf3e0c96e"
-  integrity sha512-rtsT33ylwq0NyLA024m1bu10XXV77ef2MfVj61dUEFD/kxbuPSlvuPMy7mqBJWcvQ0OFaLAIdpyOesWFvTsINA==
+"@depay/widgets@^6.21.4":
+  version "6.21.4"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-6.21.4.tgz#ad92f696f7165f61b60402a935b8e5caa6a2a099"
+  integrity sha512-0zcYP5RuN2kc2Plbzpy1hvhz5GqZ/z5uYXY7z2h97ESAsWTKTPHqSlsyqoZOA7V+DPdk2iihtgSR2xHKz7SKEQ==
   dependencies:
     "@depay/local-currency" "^3.2.2"
     "@depay/react-dialog-stack" "^5.0.1"
