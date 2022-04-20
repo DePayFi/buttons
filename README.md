@@ -9,7 +9,7 @@ Just place this on your website. No additional installations required:
   widget="Payment"
   configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
-<script src="https://integrate.depay.fi/buttons/v5.js"></script>
+<script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="https://depay.fi">Web3 Payments</a> are currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -35,7 +35,7 @@ Intended to perform payments for services and goods:
   widget="Payment"
   configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
-<script src="https://integrate.depay.fi/buttons/v5.js"></script>
+<script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="https://depay.fi">Web3 Payments</a> are currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -53,7 +53,7 @@ Intended to receive donations with having users select the amount they are donat
   widget="Donation"
   configuration='{"accept":[{"blockchain":"ethereum","token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
-<script src="https://integrate.depay.fi/buttons/v5.js"></script>
+<script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="https://depay.fi">Web3 Payments</a> are currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
@@ -71,7 +71,7 @@ Intended to directly sell tokens:
   widget="Sale"
   configuration='{"sell":{"ethereum":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb"}}'
 ></div>
-<script src="https://integrate.depay.fi/buttons/v5.js"></script>
+<script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="https://depay.fi">Web3 Payments</a> are currently not supported without JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 ```
