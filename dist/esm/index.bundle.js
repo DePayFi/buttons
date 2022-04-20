@@ -90729,6 +90729,7 @@ function init$1 (_ref) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach(function (element) {
     var label = element.getAttribute('label') || 'Pay';
     var widget = element.getAttribute('widget') || 'Payment';
+    var css = element.getAttribute('css');
     var widgetConfiguration = JSON.parse(element.getAttribute('configuration') || '{}');
 
     var onclickHandler = function onclickHandler() {
@@ -90743,7 +90744,7 @@ function init$1 (_ref) {
         onClick: onclickHandler
       }),
       outsideStyle: outsideStyle,
-      insideStyle: insideStyle
+      insideStyle: insideStyle + " " + css
     });
   });
 }

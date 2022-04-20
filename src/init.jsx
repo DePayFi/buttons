@@ -9,6 +9,7 @@ export default function ({ document }) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
+    const css = element.getAttribute('css')
     const widgetConfiguration = JSON.parse(element.getAttribute('configuration') || '{}')
     const onclickHandler = function () {
       DePayWidgets[widget](widgetConfiguration)
@@ -18,7 +19,7 @@ export default function ({ document }) {
       element,
       content: <Button label={label} onClick={onclickHandler} />,
       outsideStyle: outsideStyle,
-      insideStyle: insideStyle
+      insideStyle: insideStyle + " " + css
     })
   })
 }

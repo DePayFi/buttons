@@ -14,6 +14,10 @@ Just place this on your website. No additional installations required:
 <script>DePayButtons.init({document: document});</script>
 ```
 
+## Demo
+
+https://depayfi.github.io/buttons/dev.bundle.html
+
 ## Buttons
 
 Every button can be configured by adding/changing the html attributes 
@@ -77,6 +81,19 @@ Intended to directly sell tokens:
 ```
 
 [Read how to configure the Sale Widget](https://github.com/DePayFi/widgets#depay-sales)
+
+
+### css attribute
+
+You can use the css attribute of the button element to declare css rules to style inside elements:
+
+```html
+<div 
+  class="DePayButton" 
+  css="button { background: green; border-radius: 0.4rem; }"
+  ...
+></div>
+```
 
 ## Development
 
