@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import DePayWidgets from '@depay/widgets';
 import { ReactShadowDOM } from '@depay/react-shadow-dom';
+import ReactDOM from 'react-dom';
 
 var Button = (function (props) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -34,7 +35,7 @@ var Button = (function (props) {
   }, /*#__PURE__*/React.createElement("a", {
     className: "PoweredBy",
     target: "_blank",
-    href: "https://depay.fi?utm_source=".concat(window.location.hostname, "&utm_medium=button&utm_campaign=ButtonV3"),
+    href: "https://depay.fi",
     title: "Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion."
   }, "Powered by ", /*#__PURE__*/React.createElement("strong", null, "DePay"))));
 });
@@ -42,6 +43,30 @@ var Button = (function (props) {
 var insideStyle = "\n  .ReactShadowDOMInsideContainer {\n    user-select: none;\n  }\n  \n  button {\n    background: #ea357a;\n    border-radius: 2rem;\n    border: 1px solid transparent;\n    color: white;\n    cursor: pointer;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    font-size: 1.3rem;\n    font-weight: 500;\n    min-width: 200px;\n    padding: 0.7rem 1.4rem;\n  }\n\n  button:hover {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.05);\n  }\n\n  button:active {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.1);\n  }\n\n  button.round {\n    border-radius: 2rem;\n  }\n\n  button.rounded {\n    border-radius: 0.4rem;\n  }\n\n  button.square {\n    border-radius: 0;\n  }\n\n  .Row {\n    line-height: 1rem;\n  }\n\n  .ExampleToken {\n    border-radius: 999px;\n    height: 22px;\n    margin-right: 6px;\n    margin-top: 8px;\n    overflow: hidden;\n    width: 22px;\n  }\n\n  .ExampleToken:last-child {\n    margin-right: 0;\n  }\n\n  .PoweredBy {\n    color: rgba(0,0,0,0.2);\n    display: inline-block;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    font-size: 0.8rem;\n    font-style: italic;\n    line-height: 26px;\n    position: relative;\n    text-decoration: none;\n    top: -5px;\n  }\n\n  .PoweredBy:hover {\n    color: rgba(0,0,0,0.4);\n  }\n\n  strong {\n    font-weight: 800;\n    letter-spacing: -0.5px;\n  }\n";
 
 var outsideStyle = "\n  text-align: center;\n";
+
+var DePayButton = (function (props) {
+  var element = useRef();
+  useEffect(function () {
+    ReactShadowDOM({
+      document: document,
+      element: element.current,
+      content: /*#__PURE__*/React.createElement(Button, {
+        label: props.label,
+        onClick: onclickHandler
+      }),
+      outsideStyle: outsideStyle,
+      insideStyle: insideStyle + " " + props.css
+    });
+  }, [element]);
+
+  var onclickHandler = function onclickHandler() {
+    DePayWidgets[props.widget](props.configuration);
+  };
+
+  return /*#__PURE__*/React.createElement("div", {
+    ref: element
+  });
+});
 
 function init (_ref) {
   var document = _ref.document;
@@ -74,7 +99,10 @@ function init (_ref) {
 }
 
 var DePayButtons = {
-  init: init
+  init: init,
+  DePayButton: DePayButton,
+  React: React,
+  ReactDOM: ReactDOM
 };
 
 export default DePayButtons;
