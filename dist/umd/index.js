@@ -109,7 +109,8 @@
     init: init,
     DePayButton: DePayButton,
     React: React__default['default'],
-    ReactDOM: ReactDOM__default['default']
+    ReactDOM: ReactDOM__default['default'],
+    DePayWidgets: DePayWidgets__default['default']
   };
 
   return DePayButtons;

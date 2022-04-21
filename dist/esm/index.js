@@ -102,7 +102,8 @@ var DePayButtons = {
   init: init,
   DePayButton: DePayButton,
   React: React,
-  ReactDOM: ReactDOM
+  ReactDOM: ReactDOM,
+  DePayWidgets: DePayWidgets
 };
 
 export default DePayButtons;
