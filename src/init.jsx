@@ -7,6 +7,8 @@ import { ReactShadowDOM } from '@depay/react-shadow-dom'
 
 export default function ({ document }) {
   Array.from(document.getElementsByClassName('DePayButton')).forEach((element) => {
+    if(element.getAttribute('initialized')){ return }
+    element.setAttribute('initialized', true)
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
     const css = element.getAttribute('css')

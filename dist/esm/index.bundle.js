@@ -90733,6 +90733,11 @@ var outsideStyle = "\n  text-align: center;\n";
 function init$1 (_ref) {
   var document = _ref.document;
   Array.from(document.getElementsByClassName('DePayButton')).forEach(function (element) {
+    if (element.getAttribute('initialized')) {
+      return;
+    }
+
+    element.setAttribute('initialized', true);
     var label = element.getAttribute('label') || 'Pay';
     var widget = element.getAttribute('widget') || 'Payment';
     var css = element.getAttribute('css');
