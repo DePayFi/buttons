@@ -95,6 +95,25 @@ You can use the css attribute of the button element to declare css rules to styl
 ></div>
 ```
 
+### Render with React
+
+You can also render DePay Buttons (over initializing them):
+
+```javascript
+import { DePayButton } from '@depay/buttons'
+
+return(
+
+  <DePayButton
+    label={'Pay'},
+    widget={'Payment'}
+    configuration={{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}}
+  />
+
+)
+
+```
+
 ## Development
 
 ### Get started
