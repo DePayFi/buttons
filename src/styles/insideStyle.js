@@ -36,6 +36,10 @@ const insideStyle = `
     border-radius: 0;
   }
 
+  .Row {
+    line-height: 1rem;
+  }
+
   .ExampleToken {
     border-radius: 999px;
     height: 22px;

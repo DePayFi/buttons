@@ -3,10 +3,10 @@ import React from 'react'
 export default (props)=>{
   return (
     <div>
-      <div>
+      <div className="Row">
         <button onClick={props.onClick}>{props.label}</button>
       </div>
-      <div>
+      <div className="Row">
         <img
           className="ExampleToken"
           src="data:image/png;base64,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"
@@ -33,7 +33,7 @@ export default (props)=>{
           title="BNB"
         />
       </div>
-      <div>
+      <div className="Row">
         <a
           className="PoweredBy"
           target="_blank"
