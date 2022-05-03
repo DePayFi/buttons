@@ -5,15 +5,15 @@ const insideStyle = `
   
   button {
     background: #ea357a;
-    border-radius: 2rem;
+    border-radius: 32px;
     border: 1px solid transparent;
     color: white;
     cursor: pointer;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1.3rem;
+    font-size: 21px;
     font-weight: 500;
     min-width: 200px;
-    padding: 0.7rem 1.4rem;
+    padding: 11px 32px;
   }
 
   button:hover {
@@ -25,11 +25,11 @@ const insideStyle = `
   }
 
   button.round {
-    border-radius: 2rem;
+    border-radius: 32px;
   }
 
   button.rounded {
-    border-radius: 0.4rem;
+    border-radius: 8px;
   }
 
   button.square {
@@ -37,7 +37,7 @@ const insideStyle = `
   }
 
   .Row {
-    line-height: 1rem;
+    line-height: 16px;
   }
 
   .ExampleToken {
@@ -57,9 +57,9 @@ const insideStyle = `
     color: rgba(0,0,0,0.2);
     display: inline-block;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 0.8rem;
+    font-size: 12px;
     font-style: italic;
-    line-height: 26px;
+    line-height: 28px;
     position: relative;
     text-decoration: none;
     top: -5px;
