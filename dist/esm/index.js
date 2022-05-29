@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import DePayWidgets from '@depay/widgets';
 import { ReactShadowDOM } from '@depay/react-shadow-dom';
-import ReactDOM from 'react-dom';
+import m from 'react-dom';
 
 var Button = (function (props) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -98,11 +98,25 @@ function init (_ref) {
   });
 }
 
+function createCommonjsModule(fn) {
+  var module = { exports: {} };
+	return fn(module, module.exports), module.exports;
+}
+
+var client = createCommonjsModule(function (module, exports) {
+
+
+{
+  exports.createRoot = m.createRoot;
+  exports.hydrateRoot = m.hydrateRoot;
+}
+});
+
 var DePayButtons = {
   init: init,
   DePayButton: DePayButton,
   React: React,
-  ReactDOM: ReactDOM,
+  createRoot: client.createRoot,
   DePayWidgets: DePayWidgets
 };
 

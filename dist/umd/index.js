@@ -2,13 +2,13 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('@depay/widgets'), require('@depay/react-shadow-dom'), require('react-dom')) :
   typeof define === 'function' && define.amd ? define(['react', '@depay/widgets', '@depay/react-shadow-dom', 'react-dom'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.DePayButtons = factory(global.React, global.DePayWidgets, global.ReactShadowDOM, global.ReactDOM));
-}(this, (function (React, DePayWidgets, reactShadowDom, ReactDOM) { 'use strict';
+}(this, (function (React, DePayWidgets, reactShadowDom, m) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
   var DePayWidgets__default = /*#__PURE__*/_interopDefaultLegacy(DePayWidgets);
-  var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
+  var m__default = /*#__PURE__*/_interopDefaultLegacy(m);
 
   var Button = (function (props) {
     return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("div", {
@@ -105,11 +105,25 @@
     });
   }
 
+  function createCommonjsModule(fn) {
+    var module = { exports: {} };
+  	return fn(module, module.exports), module.exports;
+  }
+
+  var client = createCommonjsModule(function (module, exports) {
+
+
+  {
+    exports.createRoot = m__default['default'].createRoot;
+    exports.hydrateRoot = m__default['default'].hydrateRoot;
+  }
+  });
+
   var DePayButtons = {
     init: init,
     DePayButton: DePayButton,
     React: React__default['default'],
-    ReactDOM: ReactDOM__default['default'],
+    createRoot: client.createRoot,
     DePayWidgets: DePayWidgets__default['default']
   };
 
