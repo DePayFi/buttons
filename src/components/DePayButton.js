@@ -7,16 +7,18 @@ import { ReactShadowDOM } from '@depay/react-shadow-dom'
 
 export default (props)=>{
 
-  let element = useRef()
+  let element = useRef(null)
 
   useEffect(()=>{
-    ReactShadowDOM({
-      document,
-      element: element.current,
-      content: <Button label={props.label} onClick={onclickHandler} />,
-      outsideStyle: outsideStyle,
-      insideStyle: insideStyle + " " + props.css
-    })
+    if(element.current) {
+      ReactShadowDOM({
+        document,
+        element: element.current,
+        content: <Button label={props.label} onClick={onclickHandler} />,
+        outsideStyle: outsideStyle,
+        insideStyle: insideStyle + " " + props.css
+      })
+    }
   }, [element])
 
   const onclickHandler = function () {

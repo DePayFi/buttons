@@ -10,13 +10,11 @@ export default Object.assign({}, rollup, {
   output: [
     {
       format: 'es',
-      globals: globals,
       file: 'dist/esm/index.bundle.js'
     },
     {
       format: 'umd',
       name: pkg.moduleName,
-      globals: globals,
       file: 'dist/umd/index.bundle.js'
     }
   ],

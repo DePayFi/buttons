@@ -52,18 +52,20 @@
   var outsideStyle = "\n  text-align: center;\n";
 
   var DePayButton = (function (props) {
-    var element = React.useRef();
+    var element = React.useRef(null);
     React.useEffect(function () {
-      reactShadowDom.ReactShadowDOM({
-        document: document,
-        element: element.current,
-        content: /*#__PURE__*/React__default['default'].createElement(Button, {
-          label: props.label,
-          onClick: onclickHandler
-        }),
-        outsideStyle: outsideStyle,
-        insideStyle: insideStyle + " " + props.css
-      });
+      if (element.current) {
+        reactShadowDom.ReactShadowDOM({
+          document: document,
+          element: element.current,
+          content: /*#__PURE__*/React__default['default'].createElement(Button, {
+            label: props.label,
+            onClick: onclickHandler
+          }),
+          outsideStyle: outsideStyle,
+          insideStyle: insideStyle + " " + props.css
+        });
+      }
     }, [element]);
 
     var onclickHandler = function onclickHandler() {
