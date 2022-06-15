@@ -98,11 +98,20 @@
               <div class="px-4 pt-3">
                 <div id="renderInto"></div>
                 <script>
-                  DePayButtons.createRoot(document.getElementById('renderInto')).render(React.createElement(DePayButtons.DePayButton, {
+                  let root = DePayButtons.createRoot(document.getElementById('renderInto'))
+                  root.render(React.createElement(DePayButtons.DePayButton, {
                     label: 'Pay',
                     widget: 'Payment',
                     configuration: {"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}
                   }))
+                  setTimeout(()=>{
+                    console.log('RERENDER')
+                    root.render(React.createElement(DePayButtons.DePayButton, {
+                      label: 'Pay Up',
+                      widget: 'Payment',
+                      configuration: {"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}
+                    }))
+                  }, 2000)
                 </script>
               </div>
             </div>

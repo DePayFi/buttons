@@ -54,8 +54,10 @@
   var DePayButton = (function (props) {
     var element = React.useRef(null);
     React.useEffect(function () {
+      var unmount;
+
       if (element.current) {
-        reactShadowDom.ReactShadowDOM({
+        var _ReactShadowDOM = reactShadowDom.ReactShadowDOM({
           document: document,
           element: element.current,
           content: /*#__PURE__*/React__default['default'].createElement(Button, {
@@ -65,8 +67,14 @@
           outsideStyle: outsideStyle,
           insideStyle: insideStyle + " " + props.css
         });
+
+        unmount = _ReactShadowDOM.unmount;
       }
-    }, [element]);
+
+      return function () {
+        unmount ? unmount() : null;
+      };
+    }, [element, props]);
 
     var onclickHandler = function onclickHandler() {
       DePayWidgets__default['default'][props.widget](props.configuration);

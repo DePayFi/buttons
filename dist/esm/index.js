@@ -47,8 +47,10 @@ var outsideStyle = "\n  text-align: center;\n";
 var DePayButton = (function (props) {
   var element = useRef(null);
   useEffect(function () {
+    var unmount;
+
     if (element.current) {
-      ReactShadowDOM({
+      var _ReactShadowDOM = ReactShadowDOM({
         document: document,
         element: element.current,
         content: /*#__PURE__*/React.createElement(Button, {
@@ -58,8 +60,14 @@ var DePayButton = (function (props) {
         outsideStyle: outsideStyle,
         insideStyle: insideStyle + " " + props.css
       });
+
+      unmount = _ReactShadowDOM.unmount;
     }
-  }, [element]);
+
+    return function () {
+      unmount ? unmount() : null;
+    };
+  }, [element, props]);
 
   var onclickHandler = function onclickHandler() {
     DePayWidgets[props.widget](props.configuration);
