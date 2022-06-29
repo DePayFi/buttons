@@ -1215,10 +1215,10 @@
   dependencies:
     "@coinbase/wallet-sdk" "^3.0.5"
 
-"@depay/local-currency@^3.2.2":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@depay/local-currency/-/local-currency-3.2.2.tgz#b96aa8a361f864afd943baab014e8e4d2b492aa3"
-  integrity sha512-Y5INhuahlByYD1Flqs3PI0hnolK1RoZ90O0dQeoqgOAjvL+8JEkfWskKnVicEhlF2HHneQkeR0hVJxnePqKzng==
+"@depay/local-currency@^3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@depay/local-currency/-/local-currency-3.5.2.tgz#e582ccc219983479f9b29bfed94d5f5401d4b85c"
+  integrity sha512-eqXiIN6LNavQBCygT0jkl7zIAvrupYzWFMwWZhh05zKxk34fc+Cj+CBj4BLF+H1VbJL6HX9FcYmttOdnVPkidw==
 
 "@depay/react-dialog-stack@^6.0.0":
   version "6.0.0"
@@ -1290,13 +1290,13 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-11.1.0.tgz#96bd41c44afff906835587716538c121b3b854c6"
   integrity sha512-OMPTbHmpmpMoKFp3T3UnXr/PU/0xn9C4FHCbVAqQXFDNkMVExKJN6vPAoH6x2MbmhtcwhYx6ICOg4p0w0w7rIA==
 
-"@depay/widgets@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.2.2.tgz#f4e2b0efebe13d055729ba3f74400d6d6f36cd85"
-  integrity sha512-r3xGYuDX3ujbUP5j1Zd+YaLx/Qz/S4zfAYKk9BqWQZ16qfDUSEz0BbqhUPshqV3GzNy6mHmImYVWLoMQjFZfyg==
+"@depay/widgets@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.5.1.tgz#fec077cc304237d5b95254b193340b128de4fc43"
+  integrity sha512-dTV6vGrjouNfOOUhjhp2OLqFVQA0l+lKsXFm0CJJri1Ntid9Qcgsp6GOp3wubZaevtS5EZsXEpvEuHGH3n3Flw==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^1.0.5"
-    "@depay/local-currency" "^3.2.2"
+    "@depay/local-currency" "^3.5.2"
     "@depay/react-dialog-stack" "^6.0.0"
     "@depay/react-shadow-dom" "^5.0.2"
     "@depay/react-token-image" "^4.1.0"
