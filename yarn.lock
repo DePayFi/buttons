@@ -1275,10 +1275,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-exchanges/-/web3-exchanges-9.2.0.tgz#75a7468e694602083af734daa07fc9a799b0bb1d"
   integrity sha512-Tdah2GVfzMPQycF3HmVTmJDKmDIXvvfprlXZfiXBRiQgZ2lzCuknl2h79Xd4YSHfMJnes9BZSlShZpOqCV59rQ==
 
-"@depay/web3-payments@^10.5.0":
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@depay/web3-payments/-/web3-payments-10.5.0.tgz#d273c2a3aacc402d4e5d462d77a7242311bb9f9d"
-  integrity sha512-Wv3DXkBbTfQ6NkT/q4odsJ/OKEHwZrPSIaUWq/bkqoDl81DTJO5TEm0c1qVdUEkcEfZLCi1B2ODpC8AJWTvHOw==
+"@depay/web3-payments@^10.6.0":
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@depay/web3-payments/-/web3-payments-10.6.0.tgz#6b6269180162d26e5f794d7c47c7e56f92ead14b"
+  integrity sha512-mqsyy6pqhpKFSMoAaf6BW7jUlzfVyG0cyp8SOiPU3gi7bs9iGfP9I7YAzjWnRfdkll6ODAqd5ddpwmYF7bF6SQ==
 
 "@depay/web3-tokens@^8.2.0":
   version "8.2.0"
@@ -1290,10 +1290,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-11.1.0.tgz#96bd41c44afff906835587716538c121b3b854c6"
   integrity sha512-OMPTbHmpmpMoKFp3T3UnXr/PU/0xn9C4FHCbVAqQXFDNkMVExKJN6vPAoH6x2MbmhtcwhYx6ICOg4p0w0w7rIA==
 
-"@depay/widgets@^7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.5.1.tgz#fec077cc304237d5b95254b193340b128de4fc43"
-  integrity sha512-dTV6vGrjouNfOOUhjhp2OLqFVQA0l+lKsXFm0CJJri1Ntid9Qcgsp6GOp3wubZaevtS5EZsXEpvEuHGH3n3Flw==
+"@depay/widgets@^7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.13.0.tgz#cd0f77db55e05cd1281a5075c5a2f95fe64950d9"
+  integrity sha512-gOrEbtJZQCeIVn8QpozpkM2gbAbzVy2QDFi2BGa30sVaoah4ZDPZYZiLPFsInhJmwbrfSnBXmw5rrD/KVMfOkg==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^1.0.5"
     "@depay/local-currency" "^3.5.2"
@@ -1306,7 +1306,7 @@
     "@depay/web3-client" "^8.5.0"
     "@depay/web3-constants" "^6.0.0"
     "@depay/web3-exchanges" "^9.2.0"
-    "@depay/web3-payments" "^10.5.0"
+    "@depay/web3-payments" "^10.6.0"
     "@depay/web3-tokens" "^8.2.0"
     "@depay/web3-wallets" "^11.1.0"
     decimal.js "^10.3.1"
