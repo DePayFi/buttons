@@ -37,7 +37,7 @@ export default (props)=>{
         <a
           className="PoweredBy"
           target="_blank"
-          href={ `https://depay.fi` }
+          href={ `https://depay.com` }
           title="Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion."
         >
           Powered by <strong>DePay</strong>

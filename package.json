@@ -1,7 +1,7 @@
 {
   "name": "@depay/buttons",
   "moduleName": "DePayButtons",
-  "version": "7.14.3",
+  "version": "7.14.4",
   "description": "A simple button brings Web3 Payments to your website or App. DePay simplifies and improves Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion with state-of-the-art widgets.",
   "main": "./dist/umd/index.js",
   "module": "./dist/esm/index.js",
@@ -19,7 +19,7 @@
     "crypto",
     "cryptocurrencies"
   ],
-  "author": "DePay",
+  "author": "depay.com",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && npx rollup --config rollup.module.config.js && npx rollup --config rollup.bundle.config.js",
@@ -36,7 +36,7 @@
   "dependencies": {},
   "peerDependencies": {
     "@depay/react-shadow-dom": "^5.0.2",
-    "@depay/widgets": "^7.14.3",
+    "@depay/widgets": "^7.14.4",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -47,7 +47,7 @@
     "@babel/preset-react": "^7.12.7",
     "@cypress/react": "^5.12.5",
     "@depay/react-shadow-dom": "^5.0.2",
-    "@depay/widgets": "^7.13.2",
+    "@depay/widgets": "^7.14.4",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",

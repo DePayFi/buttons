@@ -35,7 +35,7 @@ var Button = (function (props) {
   }, /*#__PURE__*/React.createElement("a", {
     className: "PoweredBy",
     target: "_blank",
-    href: "https://depay.fi",
+    href: "https://depay.com",
     title: "Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion."
   }, "Powered by ", /*#__PURE__*/React.createElement("strong", null, "DePay"))));
 });
