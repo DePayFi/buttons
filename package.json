@@ -20,6 +20,7 @@
     "cryptocurrencies"
   ],
   "author": "depay.com",
+  "homepage": "https://depay.com",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && npx rollup --config rollup.module.config.js && npx rollup --config rollup.bundle.config.js",
