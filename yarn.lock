@@ -1290,10 +1290,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-11.1.1.tgz#d52bb9b7bc2f24d00f25ef2add1583ed11751703"
   integrity sha512-LjfR6v50Qy+nbrNkG9tnU0neHkp4O3arIC7lA1OYMBxbpgG467c7uX27Lws+iTPJyN5o76m+1YZ2JmGXwImNlw==
 
-"@depay/widgets@^7.16.2":
-  version "7.16.2"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.16.2.tgz#dc70f2195e26e604182c98bab08321c1f70d28e2"
-  integrity sha512-JUIhOShzDHW7z5K0zG4s+I6s5fDxEq48USiqLG6BSEih8Qmf4485lfmT4pQaWGQB7JfDONJPz9FJzGgCxKTFDw==
+"@depay/widgets@^7.16.4":
+  version "7.16.4"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-7.16.4.tgz#65b8f093e06b7d33f2d071b60b18cff390a9b5c5"
+  integrity sha512-8XIOJvRj5dG6KR6F8S8wkQRqnoEmmA0TZXe3TayEKlwlaEb8/TTHUaYqYRHQlOuIfyFTPivhyA3gID3erwSz7A==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^1.0.5"
     "@depay/local-currency" "^3.5.3"
