@@ -15,7 +15,7 @@ export default (props)=>{
       ({ unmount } = ReactShadowDOM({
         document,
         element: element.current,
-        content: <Button label={props.label} onClick={onclickHandler} />,
+        content: <Button label={props.label} onClick={onclickHandler} widget={props.widget} configuration={props.configuration} />,
         outsideStyle: outsideStyle,
         insideStyle: insideStyle + " " + props.css
       }))

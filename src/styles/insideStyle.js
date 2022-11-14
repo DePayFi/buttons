@@ -40,16 +40,19 @@ const insideStyle = `
     line-height: 16px;
   }
 
-  .ExampleToken {
+  .SupportedBlockchain {
+    background: white;
     border-radius: 999px;
+    display: inline-block;
     height: 22px;
-    margin-right: 6px;
-    margin-top: 8px;
+    margin-right: 4px;
+    margin-top: 4px;
     overflow: hidden;
     width: 22px;
+    padding: 1px;
   }
 
-  .ExampleToken:last-child {
+  .SupportedBlockchain:last-child {
     margin-right: 0;
   }
 

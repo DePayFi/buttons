@@ -12,14 +12,14 @@ export default function ({ document }) {
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
     const css = element.getAttribute('css')
-    const widgetConfiguration = JSON.parse(element.getAttribute('configuration') || '{}')
+    const configuration = JSON.parse(element.getAttribute('configuration') || '{}')
     const onclickHandler = function () {
-      DePayWidgets[widget](widgetConfiguration)
+      DePayWidgets[widget](configuration)
     }
     ReactShadowDOM({
       document,
       element,
-      content: <Button label={label} onClick={onclickHandler} />,
+      content: <Button label={label} onClick={onclickHandler} configuration={configuration} widget={widget} />,
       outsideStyle: outsideStyle,
       insideStyle: insideStyle + " " + css
     })
