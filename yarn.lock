@@ -1291,10 +1291,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-constants/-/web3-constants-6.3.2.tgz#13a6066f20baee3ea94b373eebc69bd2c4c9773b"
   integrity sha512-It2ygcxIrSXMB3ilHmgtq0EMfBGf42sgnaCFbF9Lz80gPjC7O2NifNv8h3gRd/8Fy3XwzCLkjDqbVIgn7kV9tQ==
 
-"@depay/web3-exchanges@^11.2.3":
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/@depay/web3-exchanges/-/web3-exchanges-11.2.3.tgz#eed5ef4249ed87f67eb52b3f365c4b724d855dc3"
-  integrity sha512-Vd6TAEAypevF+jnK4miryOuV6HdCf+2oQEY+RrfphJH5+MCMZaqhcw6nUt2c4lA1atEmWl7SJ8F7LfNyc5oFHw==
+"@depay/web3-exchanges@^11.2.4":
+  version "11.2.4"
+  resolved "https://registry.yarnpkg.com/@depay/web3-exchanges/-/web3-exchanges-11.2.4.tgz#bd7b1976c03d539b104ac9d638f29cf6745852ea"
+  integrity sha512-F3KLxwkD79+aq3235mZiWHt4B3Xx2prZ/D1gDPz+9ukxItSYCWxYMeeF86QHzmNeaATpkongr/jnObFXS2mc5Q==
 
 "@depay/web3-payments@^10.8.4":
   version "10.8.4"
@@ -1311,10 +1311,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-12.3.5.tgz#78149f3baa2e9a30be5bd7ed0a68d4053b4ec0e6"
   integrity sha512-N9TtLjsZIwqXBExMxVWwqKBfGrxkt2eprxPXbFdYUQ0gZ9ZLJ7BK6YUEyKaEoOHHo6lCiL+Z+upEzptW+CB/CQ==
 
-"@depay/widgets@^8.0.6":
-  version "8.0.6"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-8.0.6.tgz#a884fedc15c457faa2289c89537df5c8c50a679c"
-  integrity sha512-mXtu/i9d1TL9aF8+eLSlQn6MZcJpSOQoSMdhyDPWFQFwc94L+TKnW2+C4kuvRNugP/+30zWTYlICap3d4lUSDA==
+"@depay/widgets@^8.0.7":
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-8.0.7.tgz#703bba7c842cf9e729b2a3cf083f303d8119ad08"
+  integrity sha512-E7ioAcH2HZrvle1zwpUtIwo5wgRtlXwxEyl0eG7Pma4zx8/QpHCznhEn37ii0AMnQgP4pxUr1rHAlkYRvwD73Q==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^1.1.0"
     "@depay/local-currency" "^3.5.5"
@@ -1327,7 +1327,7 @@
     "@depay/web3-blockchains" "^6.2.3"
     "@depay/web3-client" "^10.1.23"
     "@depay/web3-constants" "^6.3.2"
-    "@depay/web3-exchanges" "^11.2.3"
+    "@depay/web3-exchanges" "^11.2.4"
     "@depay/web3-payments" "^10.8.4"
     "@depay/web3-tokens" "^9.12.8"
     "@depay/web3-wallets" "12.3.5"
