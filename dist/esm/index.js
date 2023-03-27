@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Blockchain } from '@depay/web3-blockchains';
+import Blockchains from '@depay/web3-blockchains';
 import DePayWidgets from '@depay/widgets';
 import { ReactShadowDOM } from '@depay/react-shadow-dom';
 import m from 'react-dom';
@@ -46,13 +46,13 @@ var Button = (function (props) {
       blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
         return item.blockchain;
       }))).map(function (name) {
-        return Blockchain.findByName(name);
+        return Blockchains.findByName(name);
       });
       break;
 
     case 'Sale':
       blockchains = Object.keys(props.configuration.sell).map(function (name) {
-        return Blockchain.findByName(name);
+        return Blockchains.findByName(name);
       });
       break;
   }

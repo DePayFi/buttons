@@ -1,5 +1,5 @@
 import React from 'react'
-import { Blockchain } from '@depay/web3-blockchains'
+import Blockchains from '@depay/web3-blockchains'
 
 export default (props)=>{
 
@@ -8,10 +8,10 @@ export default (props)=>{
   switch (props.widget) {
     case 'Payment':
     case 'Donation':
-      blockchains = [...new Set(props.configuration.accept.map((item)=>item.blockchain))].map((name)=>Blockchain.findByName(name))
+      blockchains = [...new Set(props.configuration.accept.map((item)=>item.blockchain))].map((name)=>Blockchains.findByName(name))
     break;
     case 'Sale':
-      blockchains = Object.keys(props.configuration.sell).map((name)=>Blockchain.findByName(name))
+      blockchains = Object.keys(props.configuration.sell).map((name)=>Blockchains.findByName(name))
     break;
   }
 

@@ -2,11 +2,12 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('@depay/web3-blockchains'), require('@depay/widgets'), require('@depay/react-shadow-dom'), require('react-dom')) :
   typeof define === 'function' && define.amd ? define(['react', '@depay/web3-blockchains', '@depay/widgets', '@depay/react-shadow-dom', 'react-dom'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.DePayButtons = factory(global.React, global.Web3Blockchains, global.DePayWidgets, global.ReactShadowDOM, global.ReactDOM));
-}(this, (function (React, web3Blockchains, DePayWidgets, reactShadowDom, m) { 'use strict';
+}(this, (function (React, Blockchains, DePayWidgets, reactShadowDom, m) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+  var Blockchains__default = /*#__PURE__*/_interopDefaultLegacy(Blockchains);
   var DePayWidgets__default = /*#__PURE__*/_interopDefaultLegacy(DePayWidgets);
   var m__default = /*#__PURE__*/_interopDefaultLegacy(m);
 
@@ -52,13 +53,13 @@
         blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
           return item.blockchain;
         }))).map(function (name) {
-          return web3Blockchains.Blockchain.findByName(name);
+          return Blockchains__default['default'].findByName(name);
         });
         break;
 
       case 'Sale':
         blockchains = Object.keys(props.configuration.sell).map(function (name) {
-          return web3Blockchains.Blockchain.findByName(name);
+          return Blockchains__default['default'].findByName(name);
         });
         break;
     }
