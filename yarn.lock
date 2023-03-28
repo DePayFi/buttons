@@ -1311,15 +1311,15 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-tokens/-/web3-tokens-9.16.0.tgz#dc35e45e5b2629a3c07cc2a5f210357ba0167736"
   integrity sha512-QAOfgRj5bfpNmHedO52BGwH8tSW8PMtVZ29S14iaCqKOm2WA03C33ro70Lzvsb5jhfSJy5HGuw++VWXMloVKwA==
 
-"@depay/web3-wallets@^15.4.2":
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-15.4.2.tgz#5b5a535d3f9514eff2d9644a0a26722d3379bb7e"
-  integrity sha512-7iIacGCSuxctOZ1sHDpa3HYlCC9TsIsMswDGcOZ/hjVJoZvw7gEZKi0xpaX5TOM/P3Lm/bB/qwXiTvR2isy5Hg==
+"@depay/web3-wallets@^15.4.5":
+  version "15.4.5"
+  resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-15.4.5.tgz#1ca3b1c58ca7797c821165948e7855a3746eb0eb"
+  integrity sha512-ieDA4Xe+MggqPgOlNbuR96SaDAAb7W7nlVgyCVK7rtp5R4Z+XaWGSfBu1xv6Igjr1pltnO6UAK+xVHbS79n5+w==
 
-"@depay/widgets@^10.2.10":
-  version "10.2.10"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-10.2.10.tgz#c8ab19a547b8567ed7ab2dcb0f7e10e3b47710ff"
-  integrity sha512-o7Rk0D1tHjoSSOjWIOjNtKKrvIXzOHLiP7n9t4bYxvOcrNrgdqZQyPWnKRxNTZuXHeDvtDvJ7Ee4ikF8rjjC6Q==
+"@depay/widgets@^10.2.11":
+  version "10.2.11"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-10.2.11.tgz#2d8f2f7659b7ca05acfd4879071ce698cb37cbe9"
+  integrity sha512-t3CG3U2dBD7lPdm0c4ik5y1sVSnNg4DHSXAXZzhMm5NQwLwo6JX3Jf6ORvQDuovByfqK3nFuTFRblLkbBdDvjA==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^3.6.4"
     "@depay/local-currency" "^3.6.0"
@@ -1335,7 +1335,7 @@
     "@depay/web3-exchanges" "^11.6.1"
     "@depay/web3-payments" "^11.1.0"
     "@depay/web3-tokens" "^9.16.0"
-    "@depay/web3-wallets" "^15.4.2"
+    "@depay/web3-wallets" "^15.4.5"
     "@tanstack/react-virtual" "^3.0.0-beta.45"
     "@uiw/copy-to-clipboard" "^1.0.12"
     decimal.js "^10.3.1"
