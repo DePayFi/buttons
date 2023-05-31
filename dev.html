@@ -9,8 +9,8 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/@depay/react-shadow-dom@5"></script>
-    <script crossorigin src="https://unpkg.com/@depay/web3-blockchains@6"></script>
-    <script src="https://integrate.depay.com/widgets/v10.js"></script>
+    <script crossorigin src="https://unpkg.com/@depay/web3-blockchains@8"></script>
+    <script src="https://integrate.depay.com/widgets/v11.js"></script>
     <script src="tmp/index.dev.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css">
     <style>
@@ -39,19 +39,6 @@
       <div class="row px-2">
 
         <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
-          <div class="px-0 py-4 rounded-lg bg-white border">
-            <div class="col px-0">
-              <div class="overflow-auto" style="height: 80px;">
-                <h5 class="px-4">Button: Payment</h5>
-              </div>
-              <div class="px-4 pb-3">
-                <div class="DePayButton" label="Pay" widget="Payment" configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
           <div class="px-0 py-4 rounded-lg border" style="background: grey">
             <div class="col px-0">
               <div class="overflow-auto" style="height: 80px;">
@@ -59,6 +46,19 @@
               </div>
               <div class="px-4 pb-3">
                 <div class="DePayButton" label="Donate" widget="Donation" configuration='{ "accept": [{ "blockchain": "ethereum", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02" }, { "blockchain": "bsc", "token": "0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb", "receiver": "0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02" }] }'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
+          <div class="px-0 py-4 rounded-lg bg-white border">
+            <div class="col px-0">
+              <div class="overflow-auto" style="height: 80px;">
+                <h5 class="px-4"></h5>
+              </div>
+              <div class="px-4 pb-3">
+                <div class="DePayButton" label="Pay" widget="Payment" configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"},{"blockchain":"bsc","amount":0.1,"token":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"},{"blockchain":"polygon","amount":0.1,"token":"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"},{"blockchain":"solana","amount":0.1,"token":"11111111111111111111111111111111","receiver":"2UgCJaHU5y8NC4uWQcZYeV9a5RyYLF7iKYCybCsdFFD1"}]}'></div>
               </div>
             </div>
           </div>
