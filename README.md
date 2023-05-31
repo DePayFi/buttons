@@ -1,4 +1,4 @@
-https://github.com/DePayFi/buttons/assets/851393/491d22c7-19fe-48c8-a2e7-f141320e8761
+https://github.com/DePayFi/buttons/assets/851393/e1df201e-3da9-4bfd-978d-d32d59cb444d
 
 ## Quickstart
 
