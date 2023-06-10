@@ -1430,10 +1430,10 @@
   resolved "https://registry.yarnpkg.com/@depay/react-token-image/-/react-token-image-4.10.0.tgz#925467e2be20008785939646fb76c80e4e35df0c"
   integrity sha512-uEdhmcg8NuhzR6rP5lZqNssu87I9mZ3tvF+xuTF0NICBJT5/4galqhCigVfGbD8fgqVjWfIWUaqa36JWxjl18A==
 
-"@depay/solana-web3.js@^1.23.1":
-  version "1.23.1"
-  resolved "https://registry.yarnpkg.com/@depay/solana-web3.js/-/solana-web3.js-1.23.1.tgz#d3f09f3e8d9e1235e2f33adab85632c43ba99b14"
-  integrity sha512-MawaOHP41kHysVmM6KXaj+SdprgsFt/IMuR6B2sdRBOg2bQl48HkG6qopvcKhFcDwxeuveMUHaUyeNT97U+ymw==
+"@depay/solana-web3.js@^1.24.0":
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/@depay/solana-web3.js/-/solana-web3.js-1.24.0.tgz#f51f32042c6ffd573c12b5b0800f8303ae176996"
+  integrity sha512-lPVXkRjeZqVvNtsiV9CVa189bE1/YACQv4U4NMTP6zB9Bvutx93k69gC8pks0P0wCqsO6chLbXCB+Hq/NdASZA==
 
 "@depay/walletconnect-v1@^1.8.0":
   version "1.8.0"
@@ -1481,22 +1481,22 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-tokens/-/web3-tokens-9.20.0.tgz#2d1234590cf820fc84fc15a00f3f7a1cb4696d1a"
   integrity sha512-myLR/z1rD5LHPE4tCw5HNpkqOpNFK75zHqE5v2xKs6qv9QsIOX64sj+7NLuvwR2UhAthEhAzRtnsmqKZMu603g==
 
-"@depay/web3-wallets@^15.11.1":
-  version "15.11.1"
-  resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-15.11.1.tgz#1c6ec6b5f39e391d06eea7b1a7a1f38c2b019c96"
-  integrity sha512-TMG1ByeF8sLRssbGx/ZNdlwB90yQFI7ShB6V+iG+1XaPVc94+FGlBhmzDFX2aoW7GtiIOY+1QHWPYwqoIBurzA==
+"@depay/web3-wallets@^15.12.4":
+  version "15.12.4"
+  resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-15.12.4.tgz#79882fd53f6c28201fbccddab9317dbb92804cc2"
+  integrity sha512-QtpfmSmC4Ai8HH81v7oGKlQNkC/Vha3wU+cR7+WdbUT6vjVFGwtf7XK/VcF4B+UYu9aduRsSma+0YuPWTZbpaA==
 
-"@depay/widgets@^11.1.3":
-  version "11.1.4"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-11.1.4.tgz#04eac2616ba3e400a2a69b57b8a75023c3aa43e9"
-  integrity sha512-CQT5C792JJu+sHBZBeHli/f/Jzpw1dhISCa/EZ84PQWT5BcINPVcLJxSbx4j0969R3TOeLzSuje9m6c83GshEA==
+"@depay/widgets@^11.4.0":
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-11.4.0.tgz#900824cef349ea99b1e8608e48f3a6e6a61b3991"
+  integrity sha512-WNy1xk70ehhHbJBrhAX9hTsQYbpNXKNRmJ94f40jqPj8FHe8Z8hbadDA4i7vlEwoVeFYMETIUs01eACmzFk2yQ==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^3.6.4"
     "@depay/local-currency" "^3.6.0"
     "@depay/react-dialog-stack" "^8.0.3"
     "@depay/react-shadow-dom" "^5.0.5"
     "@depay/react-token-image" "^4.10.0"
-    "@depay/solana-web3.js" "^1.23.1"
+    "@depay/solana-web3.js" "^1.24.0"
     "@depay/walletconnect-v1" "^1.8.0"
     "@depay/walletconnect-v2" "^2.4.2"
     "@depay/web3-assets" "^6.9.1"
@@ -1505,7 +1505,7 @@
     "@depay/web3-exchanges" "^12.2.9"
     "@depay/web3-payments" "^12.0.8"
     "@depay/web3-tokens" "^9.20.0"
-    "@depay/web3-wallets" "^15.11.1"
+    "@depay/web3-wallets" "^15.12.4"
     "@tanstack/react-virtual" "^3.0.0-beta.54"
     "@uiw/copy-to-clipboard" "^1.0.14"
     decimal.js "^10.4.3"

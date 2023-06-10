@@ -42,34 +42,18 @@ const insideStyle = `
 
   .SupportedBlockchain {
     background: white;
-    border-radius: 999px;
+    border-radius: 6px;
     display: inline-block;
-    height: 22px;
-    margin-right: 4px;
-    margin-top: 4px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
     overflow: hidden;
-    width: 22px;
+    width: 20px;
     padding: 1px;
   }
 
   .SupportedBlockchain:last-child {
     margin-right: 0;
-  }
-
-  .PoweredBy {
-    color: rgba(0,0,0,0.2);
-    display: inline-block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 12px;
-    font-style: italic;
-    line-height: 28px;
-    position: relative;
-    text-decoration: none;
-    top: -5px;
-  }
-
-  .PoweredBy:hover {
-    color: rgba(0,0,0,0.4);
   }
 
   strong {
