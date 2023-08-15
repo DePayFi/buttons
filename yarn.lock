@@ -1389,7 +1389,7 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@depay/coinbase-wallet-sdk@^3.6.4":
+"@depay/coinbase-wallet-sdk@3.6.4", "@depay/coinbase-wallet-sdk@^3.6.4":
   version "3.6.4"
   resolved "https://registry.yarnpkg.com/@depay/coinbase-wallet-sdk/-/coinbase-wallet-sdk-3.6.4.tgz#2adb0275d11cf43566bbaabc9eaa667c76d8477f"
   integrity sha512-/+iN4K5AignOiGaahsgxKUWnlx2GnjG4fwgeht4y73o7h+/D4w3x1ZTMqTTBH1O0aiWm9fl83jJF10Aso1b0GQ==
