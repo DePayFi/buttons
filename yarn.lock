@@ -1396,10 +1396,10 @@
   dependencies:
     "@coinbase/wallet-sdk" "^3.6.4"
 
-"@depay/js-verify-signature@^2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@depay/js-verify-signature/-/js-verify-signature-2.0.7.tgz#06e84996e00984fc2f920dd1fcaae17356c6f019"
-  integrity sha512-ooyY0TRsqlmv/NO2EcmT++OEZBeO9Wqaa5thlkd2xRMQ4sL3iNbLgcs2S22uULYGeWmOm8kSYopBK7XKaTm3Rw==
+"@depay/js-verify-signature-web@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@depay/js-verify-signature-web/-/js-verify-signature-web-3.0.0.tgz#178cb2e2c354a99d4695159226330928326d1193"
+  integrity sha512-EuwN0I9pCZ/8SO2mEiMekbrO2sK0Ug4ZqfJOQk1mAGP3HKJZdQPlyqxOjZ8hQ4zQGiZp8QqdGOXiT6kRtV1upQ==
 
 "@depay/local-currency@^3.6.1":
   version "3.6.1"
@@ -1486,13 +1486,13 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-16.2.0.tgz#a19e7c4ff8be5142ce18eea43aaad253f8e24183"
   integrity sha512-OF/WiP9342HJ298EsFo9huvQC+uKVmVWwotC+wbRucjP6nHCgQ8ehos49cC9WvY87AqxzN9JCTYpqZlOaVRRvw==
 
-"@depay/widgets@^12.0.0":
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-12.0.0.tgz#1c9ae9b79738d31b6d82847e9a0b7d010cb7e9fd"
-  integrity sha512-uSI/YgCjMWaSvSQv8pt9iee4Rve8BALNaFX5+X27lmhqnswYD//f3Kk5xGtstVDcZHsnjaBiiv14oLJHZ5xVQQ==
+"@depay/widgets@^12.0.2":
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-12.0.2.tgz#b7cd3f7eb792c224e385032065d7338dc97184c0"
+  integrity sha512-QheBv+mSiCtiqHN2IXy+eh3cg1XF++kDllP5fpwuSJ0Tq3VoLAN3fRXnSn6KaBAz/S/3o2KdkCuyVckFbaZCNQ==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^3.6.4"
-    "@depay/js-verify-signature" "^2.0.7"
+    "@depay/js-verify-signature-web" "^3.0.0"
     "@depay/local-currency" "^3.6.1"
     "@depay/react-dialog-stack" "^8.1.1"
     "@depay/react-shadow-dom" "^5.0.5"
