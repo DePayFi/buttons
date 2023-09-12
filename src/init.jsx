@@ -11,15 +11,20 @@ export default function ({ document }) {
     element.setAttribute('initialized', true)
     const label = element.getAttribute('label') || 'Pay'
     const widget = element.getAttribute('widget') || 'Payment'
+    const blockchains = element.getAttribute('blockchains')
+    const integration = element.getAttribute('integration')
+    const payload = element.getAttribute('payload')
     const css = element.getAttribute('css')
     const configuration = JSON.parse(element.getAttribute('configuration') || '{}')
+    if(integration) { configuration['integration'] = integration }
+    if(payload) { configuration['payload'] = payload }
     const onclickHandler = function () {
       DePayWidgets[widget](configuration)
     }
     ReactShadowDOM({
       document,
       element,
-      content: <Button label={label} onClick={onclickHandler} configuration={configuration} widget={widget} />,
+      content: <Button label={label} onClick={onclickHandler} configuration={configuration} widget={widget} blockchains={blockchains} />,
       outsideStyle: outsideStyle,
       insideStyle: insideStyle + " " + css
     })

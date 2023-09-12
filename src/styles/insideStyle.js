@@ -42,7 +42,7 @@ const insideStyle = `
 
   .SupportedBlockchain {
     background: white;
-    border-radius: 6px;
+    border-radius: 4px;
     display: inline-block;
     height: 20px;
     margin-right: 5px;

@@ -38,23 +38,27 @@ function _toConsumableArray(arr) {
 }
 
 var Button = (function (props) {
-  var blockchains = [];
+  var blockchains = props.blockchains ? JSON.parse(props.blockchains).map(function (name) {
+    return Blockchains[name];
+  }) : [];
 
-  switch (props.widget) {
-    case 'Payment':
-    case 'Donation':
-      blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
-        return item.blockchain;
-      }))).map(function (name) {
-        return Blockchains.findByName(name);
-      });
-      break;
+  if (!blockchains || blockchains.length === 0) {
+    switch (props.widget) {
+      case 'Payment':
+      case 'Donation':
+        blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
+          return item.blockchain;
+        }))).map(function (name) {
+          return Blockchains[name];
+        });
+        break;
 
-    case 'Sale':
-      blockchains = Object.keys(props.configuration.sell).map(function (name) {
-        return Blockchains.findByName(name);
-      });
-      break;
+      case 'Sale':
+        blockchains = Object.keys(props.configuration.sell).map(function (name) {
+          return Blockchains[name];
+        });
+        break;
+    }
   }
 
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -67,14 +71,17 @@ var Button = (function (props) {
     return /*#__PURE__*/React.createElement("div", {
       key: blockchain.name,
       title: blockchain.label,
-      className: "SupportedBlockchain"
+      className: "SupportedBlockchain",
+      style: {
+        backgroundColor: blockchain.logoBackgroundColor
+      }
     }, /*#__PURE__*/React.createElement("img", {
       src: blockchain.logo
     }));
   })));
 });
 
-var insideStyle = "\n  .ReactShadowDOMInsideContainer {\n    user-select: none;\n  }\n  \n  button {\n    background: #ea357a;\n    border-radius: 32px;\n    border: 1px solid transparent;\n    color: white;\n    cursor: pointer;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    font-size: 21px;\n    font-weight: 500;\n    min-width: 200px;\n    padding: 11px 32px;\n  }\n\n  button:hover {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.05);\n  }\n\n  button:active {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.1);\n  }\n\n  button.round {\n    border-radius: 32px;\n  }\n\n  button.rounded {\n    border-radius: 8px;\n  }\n\n  button.square {\n    border-radius: 0;\n  }\n\n  .Row {\n    line-height: 16px;\n  }\n\n  .SupportedBlockchain {\n    background: white;\n    border-radius: 6px;\n    display: inline-block;\n    height: 20px;\n    margin-right: 5px;\n    margin-top: 5px;\n    overflow: hidden;\n    width: 20px;\n    padding: 1px;\n  }\n\n  .SupportedBlockchain:last-child {\n    margin-right: 0;\n  }\n\n  strong {\n    font-weight: 800;\n    letter-spacing: -0.5px;\n  }\n";
+var insideStyle = "\n  .ReactShadowDOMInsideContainer {\n    user-select: none;\n  }\n  \n  button {\n    background: #ea357a;\n    border-radius: 32px;\n    border: 1px solid transparent;\n    color: white;\n    cursor: pointer;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n    font-size: 21px;\n    font-weight: 500;\n    min-width: 200px;\n    padding: 11px 32px;\n  }\n\n  button:hover {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.05);\n  }\n\n  button:active {\n    box-shadow: inset 0 0 500px rgba(0,0,0,0.1);\n  }\n\n  button.round {\n    border-radius: 32px;\n  }\n\n  button.rounded {\n    border-radius: 8px;\n  }\n\n  button.square {\n    border-radius: 0;\n  }\n\n  .Row {\n    line-height: 16px;\n  }\n\n  .SupportedBlockchain {\n    background: white;\n    border-radius: 4px;\n    display: inline-block;\n    height: 20px;\n    margin-right: 5px;\n    margin-top: 5px;\n    overflow: hidden;\n    width: 20px;\n    padding: 1px;\n  }\n\n  .SupportedBlockchain:last-child {\n    margin-right: 0;\n  }\n\n  strong {\n    font-weight: 800;\n    letter-spacing: -0.5px;\n  }\n";
 
 var outsideStyle = "\n  text-align: center;\n";
 
@@ -124,8 +131,19 @@ function init (_ref) {
     element.setAttribute('initialized', true);
     var label = element.getAttribute('label') || 'Pay';
     var widget = element.getAttribute('widget') || 'Payment';
+    var blockchains = element.getAttribute('blockchains');
+    var integration = element.getAttribute('integration');
+    var payload = element.getAttribute('payload');
     var css = element.getAttribute('css');
     var configuration = JSON.parse(element.getAttribute('configuration') || '{}');
+
+    if (integration) {
+      configuration['integration'] = integration;
+    }
+
+    if (payload) {
+      configuration['payload'] = payload;
+    }
 
     var onclickHandler = function onclickHandler() {
       DePayWidgets[widget](configuration);
@@ -138,7 +156,8 @@ function init (_ref) {
         label: label,
         onClick: onclickHandler,
         configuration: configuration,
-        widget: widget
+        widget: widget,
+        blockchains: blockchains
       }),
       outsideStyle: outsideStyle,
       insideStyle: insideStyle + " " + css

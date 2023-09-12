@@ -9,8 +9,8 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/@depay/react-shadow-dom@5"></script>
-    <script crossorigin src="https://unpkg.com/@depay/web3-blockchains@8"></script>
-    <script src="https://integrate.depay.com/widgets/v11.js"></script>
+    <script crossorigin src="https://unpkg.com/@depay/web3-blockchains@9"></script>
+    <script src="https://integrate.depay.com/widgets/v12.js"></script>
     <script src="tmp/index.dev.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css">
     <style>
@@ -37,6 +37,45 @@
       </div>
 
       <div class="row px-2">
+
+        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
+          <div class="px-0 py-4 rounded-lg border bg-white">
+            <div class="col px-0">
+              <div class="overflow-auto" style="height: 80px;">
+                <h5 class="px-4">Button: Managed Payment</h5>
+              </div>
+              <div class="px-4 pb-3">
+                <div class="DePayButton" label="Pay" integration="a1122dbc-52b3-4a35-88fd-4addf61c5d5e" payload='{ "somethign": "toForward" }' blockchains='["ethereum", "bsc", "polygon"]'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
+          <div class="px-0 py-4 rounded-lg border bg-white">
+            <div class="col px-0">
+              <div class="overflow-auto" style="height: 80px;">
+                <h5 class="px-4">Button: Managed Donation</h5>
+              </div>
+              <div class="px-4 pb-3">
+                <div class="DePayButton" label="Donate" integration="151ce302-d2b1-47cb-976f-bd6e310296ff" payload='{ "somethign": "toForward" }' blockchains='["ethereum", "bsc", "polygon"]'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
+          <div class="px-0 py-4 rounded-lg border bg-white">
+            <div class="col px-0">
+              <div class="overflow-auto" style="height: 80px;">
+                <h5 class="px-4">Button: Managed Tip</h5>
+              </div>
+              <div class="px-4 pb-3">
+                <div class="DePayButton" label="Tip" integration="c20c15d0-5b66-4e28-aa55-2eb00c9288d3" payload='{ "somethign": "toForward" }' blockchains='["ethereum", "bsc", "polygon"]'></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
           <div class="px-0 py-4 rounded-lg border" style="background: grey">
