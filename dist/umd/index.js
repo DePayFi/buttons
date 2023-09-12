@@ -94,6 +94,8 @@
 
   var DePayButton = (function (props) {
     var element = React.useRef(null);
+    var widget = props.widget ? props.widget : 'Payment';
+    var label = props.label ? props.label : 'Pay';
     React.useEffect(function () {
       var unmount;
 
@@ -102,9 +104,9 @@
           document: document,
           element: element.current,
           content: /*#__PURE__*/React__default['default'].createElement(Button, {
-            label: props.label,
+            label: label,
             onClick: onclickHandler,
-            widget: props.widget,
+            widget: widget,
             configuration: props.configuration
           }),
           outsideStyle: outsideStyle,
@@ -120,7 +122,7 @@
     }, [element, props]);
 
     var onclickHandler = function onclickHandler() {
-      DePayWidgets__default['default'][props.widget](props.configuration);
+      DePayWidgets__default['default'][widget](props.configuration);
     };
 
     return /*#__PURE__*/React__default['default'].createElement("div", {

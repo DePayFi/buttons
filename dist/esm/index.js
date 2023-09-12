@@ -87,6 +87,8 @@ var outsideStyle = "\n  text-align: center;\n";
 
 var DePayButton = (function (props) {
   var element = useRef(null);
+  var widget = props.widget ? props.widget : 'Payment';
+  var label = props.label ? props.label : 'Pay';
   useEffect(function () {
     var unmount;
 
@@ -95,9 +97,9 @@ var DePayButton = (function (props) {
         document: document,
         element: element.current,
         content: /*#__PURE__*/React.createElement(Button, {
-          label: props.label,
+          label: label,
           onClick: onclickHandler,
-          widget: props.widget,
+          widget: widget,
           configuration: props.configuration
         }),
         outsideStyle: outsideStyle,
@@ -113,7 +115,7 @@ var DePayButton = (function (props) {
   }, [element, props]);
 
   var onclickHandler = function onclickHandler() {
-    DePayWidgets[props.widget](props.configuration);
+    DePayWidgets[widget](props.configuration);
   };
 
   return /*#__PURE__*/React.createElement("div", {
