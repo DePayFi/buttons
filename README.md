@@ -2,16 +2,16 @@ https://github.com/DePayFi/buttons/assets/851393/e1df201e-3da9-4bfd-978d-d32d59c
 
 ## Quickstart
 
-Just place this on your website. No additional installations required:
+Visit https://app.depay.com -> Integrations -> New -> Select a button
+
+Configure your button and place html code afterwards:
 
 ```html
 <div
   class="DePayButton" 
-  label="Pay"
-  widget="Payment"
-  configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
+  integration="YOUR-INTEGRATION-ID"
 />
-<script src="https://integrate.depay.com/buttons/v11.js"></script>
+<script src="https://integrate.depay.com/buttons/v12.js"></script>
 <noscript><a href="https://depay.com">Web3 Payments</a> are only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({ document });</script>
 ```
@@ -54,7 +54,7 @@ Intended to perform payments for services and goods:
   widget="Payment"
   configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 />
-<script src="https://integrate.depay.com/buttons/v11.js"></script>
+<script src="https://integrate.depay.com/buttons/v12.js"></script>
 <noscript><a href="https://depay.com">Web3 Payments</a> are only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({ document });</script>
 ```
@@ -72,7 +72,7 @@ Intended to receive donations with having users select the amount they are donat
   widget="Payment"
   configuration='{"title":"Donation","accept":[{"blockchain":"ethereum","token":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb","receiver":"0x4e260bB2b25EC6F3A59B478fCDe5eD5B8D783B02"}]}'
 ></div>
-<script src="https://integrate.depay.com/buttons/v11.js"></script>
+<script src="https://integrate.depay.com/buttons/v12.js"></script>
 <noscript><a href="https://depay.com">Web3 Payments</a> are only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({ document });</script>
 ```
@@ -90,7 +90,7 @@ Intended to directly sell tokens:
   widget="Sale"
   configuration='{"sell":{"ethereum":"0xa0bEd124a09ac2Bd941b10349d8d224fe3c955eb"}}'
 ></div>
-<script src="https://integrate.depay.com/buttons/v11.js"></script>
+<script src="https://integrate.depay.com/buttons/v12.js"></script>
 <noscript><a href="https://depay.com">Web3 Payments</a> are only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({ document });</script>
 ```
