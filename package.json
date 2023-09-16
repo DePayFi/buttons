@@ -1,7 +1,7 @@
 {
   "name": "@depay/buttons",
   "moduleName": "DePayButtons",
-  "version": "12.0.6",
+  "version": "12.0.8",
   "description": "A simple button brings Web3 Payments to your website or App. DePay simplifies and improves Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion with state-of-the-art widgets.",
   "main": "./dist/umd/index.js",
   "module": "./dist/esm/index.js",
@@ -37,7 +37,7 @@
   "dependencies": {
     "@depay/react-shadow-dom": "^5.0.5",
     "@depay/web3-blockchains": "^9.2.5",
-    "@depay/widgets": "^12.0.6"
+    "@depay/widgets": "^12.0.8"
   },
   "peerDependencies": {
     "react": "^18",
@@ -53,7 +53,7 @@
     "@depay/coinbase-wallet-sdk": "3.6.4",
     "@depay/react-shadow-dom": "^5.0.5",
     "@depay/web3-blockchains": "^9.2.5",
-    "@depay/widgets": "^12.0.6",
+    "@depay/widgets": "^12.0.8",
     "@peculiar/webcrypto": "^1.4.3",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^17.1.0",
