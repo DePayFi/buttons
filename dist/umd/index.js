@@ -63,9 +63,11 @@
 
     var blockchains = typeof props.blockchains === 'string' ? JSON.parse(props.blockchains).map(function (name) {
       return Blockchains__default['default'][name];
-    }) : props.blockchains || [];
+    }) : (props.blockchains || []).map(function (name) {
+      return Blockchains__default['default'][name];
+    });
 
-    if (!blockchains || blockchains.length === 0 && (props !== null && props !== void 0 && (_props$configuration = props.configuration) !== null && _props$configuration !== void 0 && _props$configuration.accept || props !== null && props !== void 0 && (_props$configuration2 = props.configuration) !== null && _props$configuration2 !== void 0 && _props$configuration2.sell)) {
+    if ((!blockchains || blockchains.length === 0) && (props !== null && props !== void 0 && (_props$configuration = props.configuration) !== null && _props$configuration !== void 0 && _props$configuration.accept || props !== null && props !== void 0 && (_props$configuration2 = props.configuration) !== null && _props$configuration2 !== void 0 && _props$configuration2.sell)) {
       switch (props.widget) {
         case 'Payment':
         case 'Donation':

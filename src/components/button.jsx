@@ -3,9 +3,9 @@ import Blockchains from '@depay/web3-blockchains'
 
 export default (props)=>{
 
-  let blockchains = typeof props.blockchains === 'string' ? JSON.parse(props.blockchains).map((name)=>Blockchains[name]) : (props.blockchains || [])
+  let blockchains = typeof props.blockchains === 'string' ? JSON.parse(props.blockchains).map((name)=>Blockchains[name]) : (props.blockchains || []).map((name)=>Blockchains[name])
 
-  if(!blockchains || blockchains.length === 0 && (props?.configuration?.accept || props?.configuration?.sell)) {
+  if((!blockchains || blockchains.length === 0) && (props?.configuration?.accept || props?.configuration?.sell)) {
 
     switch (props.widget) {
       case 'Payment':
