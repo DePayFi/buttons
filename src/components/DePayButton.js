@@ -18,7 +18,7 @@ export default (props)=>{
       ({ unmount } = ReactShadowDOM({
         document,
         element: element.current,
-        content: <Button label={label} onClick={onclickHandler} widget={widget} configuration={props.configuration} />,
+        content: <Button label={label} onClick={onclickHandler} widget={widget} configuration={props.configuration || {}} blockchains={props.blockchains} />,
         outsideStyle: outsideStyle,
         insideStyle: insideStyle + " " + props.css
       }))
@@ -27,7 +27,7 @@ export default (props)=>{
   }, [element, props])
 
   const onclickHandler = function () {
-    DePayWidgets[widget](props.configuration)
+    DePayWidgets[widget]({...props.configuration, integration: props.integration, payload: props.payload })
   }
 
   return (

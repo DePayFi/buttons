@@ -158,6 +158,26 @@
           </div>
         </div>
 
+        <div class="d-block d-md-inline-block p-2 col-12 col-md-4">
+          <div class="px-0 py-4 rounded-lg bg-white border">
+            <div class="col px-0">
+              <div class="overflow-auto" style="height: 80px;">
+                <h5 class="px-4">Button: render integration with React</h5>
+              </div>
+              <div class="px-4 pb-3">
+                <div id="renderIntegrationInto"></div>
+                <script>
+                  let rootIntegration = DePayButtons.createRoot(document.getElementById('renderIntegrationInto'))
+                  rootIntegration.render(React.createElement(DePayButtons.DePayButton, {
+                    integration: "a1122dbc-52b3-4a35-88fd-4addf61c5d5e",
+                    payload: { "somethign": "toForward" },
+                  }))
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     <script>DePayButtons.init({document: document});</script>

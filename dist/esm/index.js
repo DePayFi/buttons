@@ -4,6 +4,20 @@ import DePayWidgets from '@depay/widgets';
 import { ReactShadowDOM } from '@depay/react-shadow-dom';
 import m from 'react-dom';
 
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
   for (var i = 0, arr2 = new Array(len); i < len; i++) {
@@ -38,11 +52,13 @@ function _toConsumableArray(arr) {
 }
 
 var Button = (function (props) {
-  var blockchains = props.blockchains ? JSON.parse(props.blockchains).map(function (name) {
-    return Blockchains[name];
-  }) : [];
+  var _props$configuration, _props$configuration2;
 
-  if (!blockchains || blockchains.length === 0) {
+  var blockchains = typeof props.blockchains === 'string' ? JSON.parse(props.blockchains).map(function (name) {
+    return Blockchains[name];
+  }) : props.blockchains || [];
+
+  if (!blockchains || blockchains.length === 0 && (props !== null && props !== void 0 && (_props$configuration = props.configuration) !== null && _props$configuration !== void 0 && _props$configuration.accept || props !== null && props !== void 0 && (_props$configuration2 = props.configuration) !== null && _props$configuration2 !== void 0 && _props$configuration2.sell)) {
     switch (props.widget) {
       case 'Payment':
       case 'Donation':
@@ -85,6 +101,9 @@ var insideStyle = "\n  .ReactShadowDOMInsideContainer {\n    user-select: none;\
 
 var outsideStyle = "\n  text-align: center;\n";
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 var DePayButton = (function (props) {
   var element = useRef(null);
   var widget = props.widget ? props.widget : 'Payment';
@@ -100,7 +119,8 @@ var DePayButton = (function (props) {
           label: label,
           onClick: onclickHandler,
           widget: widget,
-          configuration: props.configuration
+          configuration: props.configuration || {},
+          blockchains: props.blockchains
         }),
         outsideStyle: outsideStyle,
         insideStyle: insideStyle + " " + props.css
@@ -115,7 +135,10 @@ var DePayButton = (function (props) {
   }, [element, props]);
 
   var onclickHandler = function onclickHandler() {
-    DePayWidgets[widget](props.configuration);
+    DePayWidgets[widget](_objectSpread(_objectSpread({}, props.configuration), {}, {
+      integration: props.integration,
+      payload: props.payload
+    }));
   };
 
   return /*#__PURE__*/React.createElement("div", {

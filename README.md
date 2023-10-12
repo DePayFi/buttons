@@ -28,6 +28,12 @@ https://depayfi.github.io/buttons/dev.bundle.html
 - [BNB Smart Chain](https://www.binance.org/smartChain)
 - [Polygon](https://polygon.technology)
 - [Solana](https://solana.com)
+- [Optimism](https://www.optimism.io)
+- [Arbitrum](https://arbitrum.io)
+- [Fantom](https://fantom.foundation)
+- [Avalanche](https://www.avax.network)
+- [Gnosis](https://gnosis.io)
+- [Base](https://base.org)
 
 ### Wallets
 
