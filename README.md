@@ -1,7 +1,7 @@
 # [Crypto Web3 Payment Button by DePay](https://depay.com/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/DePayFi/buttons/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@depay/buttons.svg?style=flat)](https://www.npmjs.com/package/@depay/buttons) [![Tests](https://github.com/depayfi/buttons/actions/workflows/cypress.yml/badge.svg)](https://github.com/DePayFi/buttons/actions)
 
-![Example Crypto Payment Button](https://github.com/DePayFi/buttons/assets/851393/86939a32-cf49-45f4-b834-01154ce4c04b)
+<img width="832" alt="Example" src="https://github.com/user-attachments/assets/d000eb22-b584-436a-9847-a1deea8ab41f" />
 
 ## Quickstart
 
