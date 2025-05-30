@@ -1,4 +1,7 @@
-![Screenshot 2023-09-16 at 11 28 02](https://github.com/DePayFi/buttons/assets/851393/86939a32-cf49-45f4-b834-01154ce4c04b)
+# [Crypto Web3 Payment Button by DePay](https://depay.com/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/DePayFi/buttons/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@depay/buttons.svg?style=flat)](https://www.npmjs.com/package/@depay/buttons) [![Tests](https://github.com/depayfi/buttons/actions/workflows/cypress.yml/badge.svg)](https://github.com/DePayFi/buttons/actions)
+
+![Example Crypto Payment Button](https://github.com/DePayFi/buttons/assets/851393/86939a32-cf49-45f4-b834-01154ce4c04b)
 
 ## Quickstart
 
@@ -72,7 +75,7 @@ Every button can be configured by adding/changing the html attributes
 <script>DePayButtons.init({ document });</script>
 ```
 
-[Read how to configure the widget](https://github.com/DePayFi/widgets#depay-payments)
+[Read how to configure the widget](https://github.com/depayfi/widgets?#unmanaged-configuration)
 
 ### Donation Button
 
@@ -89,7 +92,7 @@ Intended to receive donations with having users select the amount they are donat
 <script>DePayButtons.init({ document });</script>
 ```
 
-[Read how to configure the widget](https://github.com/DePayFi/widgets#depay-payments)
+[Read how to configure the widget](https://github.com/depayfi/widgets?#unmanaged-configuration)
 
 ### css attribute
 
