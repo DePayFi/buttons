@@ -9,7 +9,6 @@ export default (props)=>{
 
   let element = useRef(null)
 
-  let widget = props.widget ? props.widget : 'Payment'
   let label = props.label ? props.label : 'Pay'
 
   useEffect(()=>{
@@ -18,7 +17,7 @@ export default (props)=>{
       ({ unmount } = ReactShadowDOM({
         document,
         element: element.current,
-        content: <Button label={label} onClick={onclickHandler} widget={widget} configuration={props.configuration || {}} blockchains={props.blockchains} />,
+        content: <Button label={label} onClick={onclickHandler} configuration={props.configuration || {}} blockchains={props.blockchains} />,
         outsideStyle: outsideStyle,
         insideStyle: insideStyle + " " + props.css
       }))
@@ -27,7 +26,7 @@ export default (props)=>{
   }, [element, props])
 
   const onclickHandler = function () {
-    DePayWidgets[widget]({...props.configuration, integration: props.integration, payload: props.payload })
+    DePayWidgets.Payment({...props.configuration, integration: props.integration, payload: props.payload })
   }
 
   return (

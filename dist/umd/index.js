@@ -68,22 +68,11 @@
     });
 
     if ((!blockchains || blockchains.length === 0) && (props !== null && props !== void 0 && (_props$configuration = props.configuration) !== null && _props$configuration !== void 0 && _props$configuration.accept || props !== null && props !== void 0 && (_props$configuration2 = props.configuration) !== null && _props$configuration2 !== void 0 && _props$configuration2.sell)) {
-      switch (props.widget) {
-        case 'Payment':
-        case 'Donation':
-          blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
-            return item.blockchain;
-          }))).map(function (name) {
-            return Blockchains__default['default'][name];
-          });
-          break;
-
-        case 'Sale':
-          blockchains = Object.keys(props.configuration.sell).map(function (name) {
-            return Blockchains__default['default'][name];
-          });
-          break;
-      }
+      blockchains = _toConsumableArray(new Set(props.configuration.accept.map(function (item) {
+        return item.blockchain;
+      }))).map(function (name) {
+        return Blockchains__default['default'][name];
+      });
     }
 
     return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("div", {
@@ -115,7 +104,6 @@
   function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
   var DePayButton = (function (props) {
     var element = React.useRef(null);
-    var widget = props.widget ? props.widget : 'Payment';
     var label = props.label ? props.label : 'Pay';
     React.useEffect(function () {
       var unmount;
@@ -127,7 +115,6 @@
           content: /*#__PURE__*/React__default['default'].createElement(Button, {
             label: label,
             onClick: onclickHandler,
-            widget: widget,
             configuration: props.configuration || {},
             blockchains: props.blockchains
           }),
@@ -144,7 +131,7 @@
     }, [element, props]);
 
     var onclickHandler = function onclickHandler() {
-      DePayWidgets__default['default'][widget](_objectSpread(_objectSpread({}, props.configuration), {}, {
+      DePayWidgets__default['default'].Payment(_objectSpread(_objectSpread({}, props.configuration), {}, {
         integration: props.integration,
         payload: props.payload
       }));
@@ -164,7 +151,6 @@
 
       element.setAttribute('initialized', true);
       var label = element.getAttribute('label') || 'Pay';
-      var widget = element.getAttribute('widget') || 'Payment';
       var blockchains = element.getAttribute('blockchains');
       var integration = element.getAttribute('integration');
       var payload = element.getAttribute('payload');
@@ -180,7 +166,7 @@
       }
 
       var onclickHandler = function onclickHandler() {
-        DePayWidgets__default['default'][widget](configuration);
+        DePayWidgets__default['default'].Payment(configuration);
       };
 
       reactShadowDom.ReactShadowDOM({
@@ -190,7 +176,6 @@
           label: label,
           onClick: onclickHandler,
           configuration: configuration,
-          widget: widget,
           blockchains: blockchains
         }),
         outsideStyle: outsideStyle,

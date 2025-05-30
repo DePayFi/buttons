@@ -7,15 +7,7 @@ export default (props)=>{
 
   if((!blockchains || blockchains.length === 0) && (props?.configuration?.accept || props?.configuration?.sell)) {
 
-    switch (props.widget) {
-      case 'Payment':
-      case 'Donation':
-        blockchains = [...new Set(props.configuration.accept.map((item)=>item.blockchain))].map((name)=>Blockchains[name])
-      break;
-      case 'Sale':
-        blockchains = Object.keys(props.configuration.sell).map((name)=>Blockchains[name])
-      break;
-    }
+    blockchains = [...new Set(props.configuration.accept.map((item)=>item.blockchain))].map((name)=>Blockchains[name])
   }
 
   return (
