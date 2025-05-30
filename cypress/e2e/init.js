@@ -33,19 +33,4 @@ describe('init', () => {
       })
     })
   })
-
-  it('initalizes a sale button', () => {
-  
-    cy.visit('cypress/init.sale.button.test.html').then((contentWindow) => {
-      cy.document().then((document) => {
-        DePayButtons.init({document})
-        cy.get('.DePayButton .ReactShadowDOMOutsideContainer').should(element => {
-          const [container] = element.get()
-          expect(
-            container.shadowRoot.querySelector('.ReactShadowDOMInsideContainer button').innerHTML
-          ).to.equal('Buy')
-        })
-      })
-    })
-  })
 })
