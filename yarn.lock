@@ -1494,10 +1494,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-18.1.13.tgz#9e408d9f988e8ab61750ce375aa2c10925a4df1d"
   integrity sha512-jTJsJgducMAzhcb0H8PdRfW7idSkqyFg097/jx6y9DOULY7F5Opp3WYsGhJPhzfzH4pTYXERQdd0izLPrhcVCg==
 
-"@depay/widgets@^13.0.20":
-  version "13.0.20"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-13.0.20.tgz#965452f6ea4cd777aa8f816da1e243e37e395f29"
-  integrity sha512-+WbDEI+xBFF04dW/0PvyYb14yP5d95Qo2dvsjYatymfJHlhrdCrLbNsbi4CFN973veOnAyag0XN4zHIgzG52tg==
+"@depay/widgets@^13.0.21":
+  version "13.0.21"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-13.0.21.tgz#3335c1d027ebb1c51783134ebd21249f2e10aed3"
+  integrity sha512-G+ijxd+sWq+eKKBlULGklsJsc8qf8EtjUNOKjDfl09MnIJsbS6MRi50ObSZyWlXvapPZV6XvC3n6LXqYBUBXVg==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^3.8.4"
     "@depay/js-verify-signature-web" "^3.1.8"
