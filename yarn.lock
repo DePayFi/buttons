@@ -1479,10 +1479,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-exchanges/-/web3-exchanges-15.7.1.tgz#e5773e0d8ac4df8b13997e30264c9e894b562dd1"
   integrity sha512-biEhu+tBu/9stR9c1Yv2Ti32DQf3Cw7oTcCIH8palIr2ygv5E16ixRLI3KqEAx7w/YTUcpNNl5MGUU6tCRCskQ==
 
-"@depay/web3-payments@^15.2.1":
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/@depay/web3-payments/-/web3-payments-15.3.0.tgz#f4c273bde79c664676d1f487e1f266cd944e9ab3"
-  integrity sha512-jdPSJErnWN3IGwyRFj0vozzKzwDNFGCbezpPLtRnf2lKdZ46V33HWVFifQV/zFXp9InTkaT8Q8aUsdk8A804UA==
+"@depay/web3-payments@^15.3.1":
+  version "15.3.1"
+  resolved "https://registry.yarnpkg.com/@depay/web3-payments/-/web3-payments-15.3.1.tgz#74f44db152d84f7a0f84ce1d5f8f7896c6a700dc"
+  integrity sha512-yczyWn3SO6jGCHt4i0D3eoppAERj0AIdFjurt2BHL5x6kaphKe7CrPTxHuP1NSLo/qCWmnKo07kjdTYvMfcIzA==
 
 "@depay/web3-tokens@^11.1.0":
   version "11.1.0"
@@ -1494,10 +1494,10 @@
   resolved "https://registry.yarnpkg.com/@depay/web3-wallets/-/web3-wallets-18.1.15.tgz#219956daf13c02798d29ca60eb6e9d75771bc3ae"
   integrity sha512-8S6NmN99/BZ3N9/NXzN4v73oJjNtoaI9zYGnurrt6g55G+a4b9dSzOIj+qYBjcxTf3yymcmoILxUityGBcHDIw==
 
-"@depay/widgets@^13.0.26":
-  version "13.0.26"
-  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-13.0.26.tgz#dda864bd998970601b740b2a752ffbe17cf665de"
-  integrity sha512-2j1QfV6ykJNkPA0ISVqCRBIdh+4TX3XIkwDAK3FS4XVIIzQ1377vTJypGeFXMUhxvo5IEqDsELgyX6W3fsVZTQ==
+"@depay/widgets@^13.0.29":
+  version "13.0.29"
+  resolved "https://registry.yarnpkg.com/@depay/widgets/-/widgets-13.0.29.tgz#a98b2f63562f0ffaa10bb59aaec6291491c47a44"
+  integrity sha512-wa67A0ecWFhSTqVwDs76iZgPc/AUG+aq626A9ke/QqcOht9og5v5YKdqujp0waK2+ZGnaVujYwMajWRLMLj/Aw==
   dependencies:
     "@depay/coinbase-wallet-sdk" "^3.8.4"
     "@depay/js-verify-signature-web" "^3.1.8"
@@ -1510,7 +1510,7 @@
     "@depay/web3-blockchains" "^9.8.6"
     "@depay/web3-client" "^11.1.0"
     "@depay/web3-exchanges" "^15.7.1"
-    "@depay/web3-payments" "^15.2.1"
+    "@depay/web3-payments" "^15.3.1"
     "@depay/web3-tokens" "^11.1.0"
     "@depay/web3-wallets" "^18.1.15"
     "@tanstack/react-virtual" "^3.0.0-beta.54"
